@@ -33,7 +33,7 @@ Run your document through a source code compiler. The compiler checks for errors
 
 The compiler creates a new document, coded into Java bytecode. Any device capable of running Java will be able to interpret/translate this file into something it can run. The compiled bytecode is platform-independent.
 
-You don't have a physical Java Machine, but you have a virtual Java machine (implented in software) running inside each electronic gadget. The virtual machine reads and runs the bytecode
+You don't have a physical Java Machine, but you have a virtual Java machine (implemented in software) running inside each electronic gadget. The virtual machine reads and runs the bytecode
 
 ## What you'll do in Java
 
@@ -49,7 +49,7 @@ Type a source file, compile it using javac compiler, then run the compiled bytec
 
 ## Anatomy of a class
 
-When Java Virtual Machine starts running, it lookss for the class you give it at the command line. Then it starts looking for a specially-written method that looks exactly like:
+When Java Virtual Machine starts running, it looks for the class you give it at the command line. Then it starts looking for a specially-written method that looks exactly like:
 
 ````java
 
@@ -108,13 +108,15 @@ When you run the program, you'll really be running a class.
 
 Running a program means telling the Java Virtual Machine to "Load the 'MyFirstApp' class, them start executing its 'main()' method. Keep running until all the code in main is finished."
 
-No matter how many classes your program uses, there has to be a main() method to get the ball rolling.
+No matter how many classes your program uses, there has to be a main() method to get the started.
 
 ## What can you say in the main method?
 
 Statements--do something
 
-Loops--for, while, and do-while: > (greater than), < (less than), == (equality)--one = is assignment---boolean inside parentheses
+Loops--for, while, and do-while: > (greater than), < (less than), == (equality)--one = is assignment---
+
+Boolean inside the parentheses to get a true or false answer
 
 Branching--if/else tests
 
@@ -194,7 +196,7 @@ This runs no matter what
 
 System.out.print vs. System.out.println:
 
-System.out.println inserts a newline while System.out.print keeps printing on the same liine.
+System.out.println inserts a newline while System.out.print keeps printing on the same line.
 
 
 ## Coding A Serious Business Application
@@ -274,11 +276,11 @@ Java has an overall source file that holds each class.
 
 Inside of that source file, there are classes that use methods to give instructions for how the finishing product should be produced.
 
-Methods work as a function or procedure that gets every detail defined for the main function to carry.
+Methods work as a function or procedure that gets every detail defined for the main "function" to carry.
 
 The methods may consist of print statements, loops, and so forth.
 
-If/while/do-while statements are used to produce a boolean and you would help the user understand the work by printing a message which simply explains that that if/while/do-while statement, which was used to test work, was either true or false.
+If/while/do-while statements are used to produce a boolean and you would help the user understand the work by printing a message which simply explains that the if/while/do-while statement, which was used to test work, was either true or false.
 
 Variables are used as object "state" and as local variables. -- Instance variables and variables declared within a method
 
