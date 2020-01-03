@@ -59,7 +59,7 @@ public static void main(String[] args) {
 
 ````
 
-Next, the Java Virtual Machine runs everything between the curly braces off your main method. Every Java application has to have at least one class, and at least one main method (not one main per class, just one main per application).
+Next, the Java Virtual Machine runs everything between the curly braces of your main method. Every Java application has to have at least one class, and at least one main method (not one main per class, just one main per application).
 
 ````java
 
