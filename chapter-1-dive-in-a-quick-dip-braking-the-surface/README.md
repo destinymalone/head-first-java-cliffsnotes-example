@@ -61,13 +61,23 @@ public static void main(String[] args) {
 
 Next, the Java Virtual Machine runs everything between the curly braces off your main method. Every Java application has to have at least one class, and at least one main method (not one main per class, just one main per application).
 
+````java
+
+public class MyFirstApp {
+    public static void main(String[] args) {
+        System.out.print("I Rule!");
+    }
+}
+
+````
+
 Public: Everyone can access it
 
 Class: A class
 
 MyFirstApp: Name of this specific class
 
-'{':First opening curly brace of the class
+'{': First opening curly brace of the class
 
 Void: The return type void means there's no return value
 
