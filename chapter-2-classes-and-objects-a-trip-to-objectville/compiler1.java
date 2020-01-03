@@ -38,3 +38,5 @@ class TapeDeckTestDrive {
         }
     }
 }
+
+// We have the template made, now we have to make an object.

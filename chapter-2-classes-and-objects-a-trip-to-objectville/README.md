@@ -4,7 +4,14 @@
 
 ## Table of Contents
 
-???
+Chair Wars (Brad the OO guy vs. Larry the procedural guy)
+Inheritance (an introduction)
+Overriding methods (an introduction)
+What's in a class? (methods,instance variables)
+Making your first object
+Using main()
+Guessing Game Code
+Excercises and puzzles
 
 #### Each lesson within chapter 2 is completed and explained in order
 
@@ -30,19 +37,39 @@ Brad uses methods and classes that separate each working code and test, which is
 
 So, neither of them recieved the Aeron because there was a third programmer given the task who was able to finish before Larry and Brad.
 
-## OO--Object Oriented Development in Java
+## What should I know about inheritance and overriding methods?
+
+Look for similarieties within each "function" or method.
+
+If you have repeating features, abstract out the features and put them into a new class that other subclasses can link to. This is how you inherit from the superclasses, while not repeating things in each subclass.
+
+
+When it comes to overriding, subclasses redefine one of the inherited methods when it needs to change or extend the behavior of that method.
+
+If you are using the same methods, use inheritance to prevent repeats.
+If you have the same method with special features added on, your features are what's used instead of what those methods are in the superclass. This is done even if you link every subclass to one superclass.
+
+## What is OO?--Object Oriented Development in Java
 
 - Works with superclasses, subclasses, instance variables, methods, and attributes.
 
 - Things an object knows about itself are called instance variables
-    They represent an objects state (the data), and can have unique values for ech object of that type.
+    They represent an object's state (the data), and can have unique values for each object of that type.
 
 - Things an object can do are called methods
-    When designing a class, think about the data an object will need to know about itself, and also designing the methods that operate on that data. Objects commoly have methods that read to write the value of the instance variables.
+    When designing a class, think about the data an object will need to know about itself, and also designing the methods that operate on that data. Objects commonly have methods that read to write the value of the instance variables.
 
     Objects have instance variables and methods, but those instance variables and methods are designed as part of the class.
 
-## Difference between a class and an object
+
+Object Oreiented works with superclasses, subclasses, instance variables, methods, andn attributes.
+Objects know instance variables already. The instance variables represent an object's state, which have certain values for objects provided for that type.
+
+What an object does, is known as a method. The methods write the value/output of the given instance variables.
+
+Objects, their methods, and instance variable are all compiled within the class of that file being ran.
+
+## What is the difference between a class and an object
 
 A class is not an object, but it's used to construct objects.
 
@@ -52,7 +79,7 @@ Each object made from that class can have its own values of that class.
 
 Ex. Button class which makes dozens of different buttons. Each button has it's own color, size, type, etc.
 
-## Making Your First Object
+## Making Your First Object-How is it all put together?
 
 ```java
 
@@ -75,6 +102,12 @@ class DogTestDrive {
 }
 
 ```
+
+Each variable has it's value defined with a primitive like int, string, double, boolean, etc.
+
+The TestDrive is to test the code you have in the superclass.
+
+The main function is now running while using the first class without repeating any values.
 
 ### Note:
 
@@ -238,6 +271,7 @@ public class GameLauncher {
 
 ````
 
+
 # Who am I?
 
 I am compiled from a .java file. -- class
@@ -266,22 +300,22 @@ I declare methods. -- class
 
 I can change at runtime. -- object & instance variable
 
-### Note:
+## Note:
 
 Both classes and objects are said to have "state" and "behavior".
 
 They are defined in the class, but the object is also said to 'have' them.
 
 
-## Overview
+# Overview
 
 Java has an overall source file that holds each class.
 
 Inside of that source file, there are classes that use methods to give instructions for how the finishing product should be produced.
 
-Methods work as a function or procedure that gets every detail defined for the main function to carry.
+Methods work as a function or procedure that gets every detail defined for the main "function" to carry.
 
 Variables are used as object "state" and as local variables. -- Instance variables and variables declared within a method
 
-Variables are declared as Integers, Strings, and arrays
+Again, variables are declared as Integers, Strings, arrays, etc.
 

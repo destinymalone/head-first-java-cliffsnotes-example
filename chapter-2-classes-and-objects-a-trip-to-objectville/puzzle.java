@@ -30,3 +30,5 @@ public class EchoTestDrive {
         System.out.println(e2.count);
     }
 }
+
+// Output: helloooo.... helloooo.... helloooo.... helloooo.... 10

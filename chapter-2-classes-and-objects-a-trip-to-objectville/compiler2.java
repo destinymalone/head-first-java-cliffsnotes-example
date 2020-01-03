@@ -44,3 +44,5 @@ class DVDPlayerTestDrive {
         }
     }
 }
+
+// The line: d.playDVD(); wouldn't compile without a method.
