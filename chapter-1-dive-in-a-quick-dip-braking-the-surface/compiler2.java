@@ -1,3 +1,7 @@
+// Note: all of your .java source files should be named whatever your superclass name is.
+
+// Foo.java
+
 public static void main(String[] args) {
     int x = 5;
     while (x > 1) {

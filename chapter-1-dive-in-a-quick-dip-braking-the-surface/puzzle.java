@@ -1,3 +1,7 @@
+// Note: all of your .java source files should be named whatever your superclass name is.
+
+// PoolPuzzleOne.java
+
 class PoolPuzzleOne {
     public static void main(String[] args) {
         int x = 0;

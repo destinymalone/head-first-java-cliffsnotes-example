@@ -1,6 +1,12 @@
+// Note: all of your .java source files should be named whatever your superclass name is.
+
+// Excerciselb.java
+
 class Excerciselb {
     int x = 5;
-    while (x > 1) {
+
+    while(x>1)
+    {
         x = x - 1;
 
         if (x < 3) {
@@ -25,4 +31,5 @@ class Excerciselb {
     }
 }
 
-// The 'while' loop code must be inside a method, not hanging out inside the class.
+// The 'while' loop code must be inside a method, not hanging out inside the
+// class.

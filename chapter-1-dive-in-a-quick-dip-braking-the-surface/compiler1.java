@@ -1,3 +1,7 @@
+// Note: all of your .java source files should be named whatever your superclass name is.
+
+// Excerciselb.java
+
 class Excerciselb {
     public static void main(String[] args) {
         int x = 1;
