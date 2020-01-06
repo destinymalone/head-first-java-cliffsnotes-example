@@ -1,3 +1,7 @@
+// Note: all of your .java source files should be named whatever your superclass name is.
+
+// DVDPlayer.java
+
 class DVDPlayer {
     boolean canRecord = false;
 

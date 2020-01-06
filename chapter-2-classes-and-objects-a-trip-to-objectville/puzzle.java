@@ -1,3 +1,7 @@
+// Note: all of your .java source files should be named whatever your superclass name is.
+
+// Echo.java
+
 class Echo {
     int count = 0;
     void hello() {
