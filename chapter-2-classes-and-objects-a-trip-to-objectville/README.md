@@ -29,27 +29,11 @@ Things (key players):
 -the Sound
 -Clicking Events
 
-## "Who got the Aeron?"
+### "Who got the Aeron?"
 
-Larry does not use methods when adding code, which affects all of the code and each test that was made previously.
+Larry does not use methods when adding code, which affects all of the code and each test that was made previously. Brad uses methods and classes that separate each working code and test, which is not affected when code is suddenly changed or added. So, neither of them recieved the Aeron because there was a third programmer given the task who was able to finish before Larry and Brad.
 
-Brad uses methods and classes that separate each working code and test, which is not affected when code is suddenly changed or added.
-
-So, neither of them recieved the Aeron because there was a third programmer given the task who was able to finish before Larry and Brad.
-
-## What should I know about inheritance and overriding methods?
-
-Look for similarities within each "function" or method.
-
-If you have repeating features (instance variables or methods), abstract out the features and put them into a new class that other subclasses can link to. This is how you inherit from the superclasses, while not repeating things in each subclass.
-
-
-When it comes to overriding, subclasses re-define one of the inherited methods when it needs to change or extend the behavior of that method.
-
-If you are using the same methods, use inheritance to prevent repeats.
-If you have the same method with special features added on, your features are what's used instead of what those methods are in the superclass. This is done even if you link every subclass to one superclass.
-
-## What is OO?--Object Oriented Development in Java
+### What is OO?--Object Oriented Development in Java
 
 - Works with superclasses, subclasses, instance variables, methods, and attributes.
 
@@ -69,13 +53,14 @@ What an object does, is known as a method. The methods write the value/output of
 
 Objects, their methods, and instance variable are all compiled within the class of that file being ran.
 
-## What is the difference between a class and an object
 
-A class is not an object, but it's used to construct objects.
+## What should I know about inheritance and overriding methods?
 
-A class is a blueprint for an object. It tells the program how to make an object of that certain type. 
+ Inheritance and overriding methods are used when you have the "same" methods used throughout many "functions"/classes. If you have repeating features (instance variables or methods), abstract out the features and put them into a new class that other subclasses can link to. This is how you inherit from the superclasses, while not repeating things in each subclass. When it comes to overriding, subclasses re-define one of the inherited methods when it needs to change or extend the behavior of that method.
 
-Each object made from that class can have its own values of that class.
+## What is the difference between a class and an object?
+
+A class is not an object, but it's used to construct objects. A class is a blueprint for an object. It tells the program how to make an object of that certain type. Each object which is made from that class, can have its own values of that class.
 
 Ex. Button class which makes dozens of different buttons. Each button has it's own color, size, type, etc.
 
@@ -103,11 +88,7 @@ class DogTestDrive {
 
 ```
 
-Each variable has it's value defined with a primitive like int, string, double, boolean, etc.
-
-The TestDrive is to test the code you have in the superclass.
-
-The main function is now running while using the first class without repeating any values.
+Each variable has it's value defined with a primitive like int, string, double, boolean, etc. The TestDrive is to test the code you have in the superclass. The main function is now running while using the first class without repeating any values.
 
 ### Note:
 
@@ -150,22 +131,16 @@ public class MovieTestDrive {
 
 ```
 
-## Getting out of main
+## How do we get out of main?
 
 There are two uses of main:
     to test your real class
     to launch/start your Java application
 
-A real Java application is nothing but objects talking to other objects.
-
-Talking means objects calling methods on one another.
+A real Java application is nothing but objects "talking" to other objects. Talking means objects calling methods on one another. The real classes are tested when you decide to call a main() method. Once the compiled file can successfully run with no errors, your application is now launched.
 
 
-### Guessing Game
-
-Player = objects
-
-Game is super class
+## Guessing Game
 
 ```java
 
@@ -233,25 +208,7 @@ public class GuessGame {
 
 ```
 
-GuessGame has three instance variables for the three Player objects
-
-Create three Player objects and assign them to the three Player instance variables
-
-Declare three variables to hold the three guesses the Players make
-
-Declare three variables to hold a true or false based on the player's answer
-
-Make a "target" number that the players have to guess
-
-Call each player's guess() method
-
-Get each Player's guess (the result of their guess() methof running) by accessing the number variable of each player
-
-Check each player's guess to see if it matches the target number. If a player is right, then set that player's variable to be true since it was set to false by default.
-
-If player 1 or player 2 or player 3 is right, the game is over and while loop breaks.
-
-Else, stay in the loop and ask the players for another guess.
+GuessGame has three instance variables for the three Player objects. You can now create three Player objects and assign them to the three Player instance variables. The next step is to declare three variables to hold the three guesses the Players make. Now you would declare three variables to hold a true or false, based on the player's answer. Make a "target" number that the players have to guess to tell if a player is correct or not. Afterwards, you would call each player's guess() method, get each Player's guess (the result of their guess() method running) by accessing the number variable of each player, and check each player's guess to see if it matches the target number. If a player is right, then set that player's variable to be true since it was set to false by default. If player 1 or player 2 or player 3 is right, the game is over and while loop breaks, else, stay in the loop and ask the players for another guess.
 
 
 ### Running The Guessing Game
@@ -290,7 +247,7 @@ The Logic:
 3) The GuessGame object's startGame() method is where the entire game plays out. It creates three players, then "thinks" of a randon number (the target for the players to guess). It then asks each player to guess, check the results, and either prints out information about the winning player(s) or ask them to guess again.
 
 
-# Who am I?
+### Who am I?
 
 I am compiled from a .java file. -- class
 
