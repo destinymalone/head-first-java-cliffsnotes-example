@@ -88,7 +88,7 @@ class DogTestDrive {
 
 ```
 
-Each variable has it's value defined with a primitive like int, string, double, boolean, etc. The TestDrive is to test the code you have in the superclass. The main function is now running while using the first class without repeating any values.
+Each variable has it's value defined with a primitive, like: int, string, double, boolean, etc. The TestDrive is to test the code you have in the superclass. The main method is now running while using the first class without repeating any values.
 
 ### Note:
 
