@@ -25,29 +25,18 @@ Friendly syntax, object-oriented features, memory management, promise of portabi
 Write-once/run anywhere
 
 
-## The Way Java Works
+## How does Java work?
 
-Create a source document. Use an established protocol.
+In order to run Java successfully you need to create a source file and then use an established protocol for the file. The file will then be run through a source code compiler, which will check for errors and won't finish compiling until it's satisfied everything will run smoothly.
 
-Run your document through a source code compiler. The compiler checks for errors and won't let you compile until it's satisfied that everything will run correctly.
+The compiler will then create a new file that is coded into Java bytecode. Any device capable of running Java will be able to interpret/translate this file into something it can run, meaning the compiled bytecode is platform-independent. You don't have a physical Java Machine, but you have a virtual Java machine (implemented in software) running inside each electronic gadget. The virtual machine reads and runs the bytecode
 
-The compiler creates a new document, coded into Java bytecode. Any device capable of running Java will be able to interpret/translate this file into something it can run. The compiled bytecode is platform-independent.
+## Can you explain the code structure in Java?
 
-You don't have a physical Java Machine, but you have a virtual Java machine (implemented in software) running inside each electronic gadget. The virtual machine reads and runs the bytecode
+- Once you have a source file you will need to put a class in the source file, place methods within the class, and then place statements inside of that method.
 
-## What you'll do in Java
 
-Type a source file, compile it using javac compiler, then run the compiled bytecode on a Java virtual machine
-
-## Code Structure in Java
-
-- Put a class in a source file.
-
-- Put methods in a class.
-
-- Put statements in a method.
-
-## Anatomy of a class
+## What is the anatomy of a class?
 
 When Java Virtual Machine starts running, it looks for the class you give it at the command line. Then it starts looking for a specially-written method that looks exactly like:
 
@@ -71,64 +60,48 @@ public class MyFirstApp {
 
 ````
 
-Public: Everyone can access it
+Let's explain what each piece's, from the code above, purpose is:
 
-Class: A class
+    Public: Everyone can access it
 
-MyFirstApp: Name of this specific class
+    Class: A class
 
-'{': First opening curly brace of the class
+    MyFirstApp: Name of this specific class
 
-Void: The return type void means there's no return value
+    '{': First opening curly brace of the class
 
-Main: The name of this method
+    Void: The return type void means there's no return value
 
-(String[] args): Arguments to the method. This method must be given an array of Strings, and the array will be called 'args'
+    Main: The name of this method
 
-'{': Opening brace of the method
+    (String[] args): Arguments to the method. This method must be given an array of Strings, and the array will be called 'args'
 
-System.out.print: This says print to standard output (defaults to command-line)
+    '{': Opening brace of the method
 
-("I Rule!"): The string you want printed
+    System.out.print: This says print to standard output (defaults to command-line)
 
-';': Every statement must end in a semicolon
+    ("I Rule!"): The string you want printed
 
-'}': Closing brace of main method
+    ';': Every statement must end in a semicolon
 
-'}': Closing brace of 'MyFirstApp' class
+    '}': Closing brace of main method
+
+    '}': Closing brace of 'MyFirstApp' class
+
+Now that you know what each piece is used for, you can now compile and run this code inside of it's own file.
 
 
-## Writing a class with a main
+## How to write a class in main?
 
-Everythiing goes in a class when using Java.
+Everythiing goes in a class when using Java. You'll type a source code file, then compile it into a new class file. When you run the program, you'll really be running a class. Running a program means telling the Java Virtual Machine to "Load the 'MyFirstApp' class, them start executing its 'main()' method. Keep running until all the code in main is finished." Remeber, no matter how many classes your program uses, there has to be a main() method to get the started.
 
-You'll type a source code file, then compile it into a new class file.
+### What can you say in the main method?
 
-When you run the program, you'll really be running a class.
+Main methods consist of statements, loops, and branching. The statements tell the file to do something. If you want that something to have some speacial instructions, you would implement a loop. There are for, while, and do-while loops. Each loop must pass a boolean within the parentheses, because it is used too check if your information is true or false. Branching does the same thing, tests your code to see whether or not it is true or false so it can continue to the end of the file.
 
-Running a program means telling the Java Virtual Machine to "Load the 'MyFirstApp' class, them start executing its 'main()' method. Keep running until all the code in main is finished."
+## What should I know about looping?
 
-No matter how many classes your program uses, there has to be a main() method to get the started.
-
-## What can you say in the main method?
-
-Statements--do something
-
-Loops--for, while, and do-while: > (greater than), < (less than), == (equality)--one = is assignment---
-
-Boolean inside the parentheses to get a true or false answer
-
-Branching--if/else tests
-
-## Looping
-
-As long as some condition is true, you do everything inside the loop block
-
-The loop block is bounded by a pair of curly braces, so whatever you want to repeat needs to be inside that block.
-
-The key to a loop is the conditional test.
-
-In Java, a conditional test is an expression that results in a boolean value--true or false
+Looping basically says, "As long as some condition is true, do everything inside the loop block". The loop block is bounded by a pair of curly braces, so whatever you want to repeat needs to be inside that block. The key to a loop is the conditional test. In Java, a conditional test is an expression that results in a boolean value--true or false, just as I stated in the section above. Below is a representation of how looping can be used.
 
 ````java
 
@@ -146,7 +119,9 @@ while (z == 17 ) {
 
 ````
 
-## Conditional Branching
+## What about conditional branching?
+
+The code below will put your skills to the test. You can now write a class, structure it to be able to run, and use an if to test your work, producing an our come showing that it was either true or false.
 
 ````java
 
@@ -165,7 +140,7 @@ class IfTest {
 
 Only runs, "x must be 3", if x = 3 is true
 
-Always wil run, "This runs no matter what", even if x != 3
+Always will run, "This runs no matter what", even if x != 3
 
 ````java
 
@@ -192,7 +167,7 @@ This runs no matter what
 
 
 
-## Note:
+### Note:
 
 System.out.print vs. System.out.println:
 
@@ -230,11 +205,9 @@ public class BeerSong {
 
 ````
 
-You have compiled the file. It can run. You utilized looping, branching, printing strings, arrays, and using statements to make your class "do something". You also have concatenated strings and numbers together so the user can understand your work.
+You have compiled the file. It can run. You utilized looping, branching, printing strings, arrays, and using statements to make your class "do something". You also have concatenated strings and numbers together so the user can understand your work. Now you can run a Java file!
 
-Now you can program Java
-
-## Code Magnets
+### Code Magnets
 
 ````java
 
@@ -272,17 +245,7 @@ a-b c-d
 
 # Overview
 
-Java has an overall source file that holds each class.
+Java has an overall source file that holds each class. Inside of that source file, there are classes that use methods to give instructions for how the finishing product should be produced. Methods work as a function or procedure that gets every detail defined for the main "function" to carry. The methods may consist of print statements, loops, and so forth. If/while/do-while statements are used to produce a boolean and you would help the user understand the work by printing a message which simply explains that the if/while/do-while statement, which was used to test work, was either true or false. Branching is used when testing code. if/while/do-while--Do this if it is true, else do something different without touching the lines associated with true statements.
 
-Inside of that source file, there are classes that use methods to give instructions for how the finishing product should be produced.
 
-Methods work as a function or procedure that gets every detail defined for the main "function" to carry.
-
-The methods may consist of print statements, loops, and so forth.
-
-If/while/do-while statements are used to produce a boolean and you would help the user understand the work by printing a message which simply explains that the if/while/do-while statement, which was used to test work, was either true or false.
-
-Variables are used as object "state" and as local variables. -- Instance variables and variables declared within a method
-
-Variables are declared as Integers, Strings, and arrays
 
