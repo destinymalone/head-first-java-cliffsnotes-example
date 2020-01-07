@@ -39,12 +39,12 @@ So, neither of them recieved the Aeron because there was a third programmer give
 
 ## What should I know about inheritance and overriding methods?
 
-Look for similarieties within each "function" or method.
+Look for similarities within each "function" or method.
 
-If you have repeating features, abstract out the features and put them into a new class that other subclasses can link to. This is how you inherit from the superclasses, while not repeating things in each subclass.
+If you have repeating features (instance variables or methods), abstract out the features and put them into a new class that other subclasses can link to. This is how you inherit from the superclasses, while not repeating things in each subclass.
 
 
-When it comes to overriding, subclasses redefine one of the inherited methods when it needs to change or extend the behavior of that method.
+When it comes to overriding, subclasses re-define one of the inherited methods when it needs to change or extend the behavior of that method.
 
 If you are using the same methods, use inheritance to prevent repeats.
 If you have the same method with special features added on, your features are what's used instead of what those methods are in the superclass. This is done even if you link every subclass to one superclass.
@@ -53,16 +53,16 @@ If you have the same method with special features added on, your features are wh
 
 - Works with superclasses, subclasses, instance variables, methods, and attributes.
 
-- Things an object knows about itself are called instance variables
+- Things an object knows about itself are called instance variables.
     They represent an object's state (the data), and can have unique values for each object of that type.
 
-- Things an object can do are called methods
-    When designing a class, think about the data an object will need to know about itself, and also designing the methods that operate on that data. Objects commonly have methods that read to write the value of the instance variables.
+- Things that an object can do are called methods.
+    When designing a class, think about the data an object will need to know about itself, and also designing the methods that operate on that data. Objects commonly have methods that are read to write the value of the instance variables.
 
     Objects have instance variables and methods, but those instance variables and methods are designed as part of the class.
 
 
-Object Oreiented works with superclasses, subclasses, instance variables, methods, andn attributes.
+Object Oriented works with superclasses, subclasses, instance variables, methods, andn attributes.
 Objects know instance variables already. The instance variables represent an object's state, which have certain values for objects provided for that type.
 
 What an object does, is known as a method. The methods write the value/output of the given instance variables.
@@ -89,7 +89,7 @@ class Dog {
     String name;
 
     void bark() {
-        System,out,println("Ruff! Ruff!");
+        System.out.println("Ruff! Ruff!");
     }
 }
 
@@ -152,11 +152,16 @@ public class MovieTestDrive {
 
 ## Getting out of main
 
+There are two uses of main:
+    to test your real class
+    to launch/start your Java application
+
 A real Java application is nothing but objects talking to other objects.
 
-Calls methods on one another.
+Talking means objects calling methods on one another.
 
-# Guessing Game
+
+### Guessing Game
 
 Player = objects
 
@@ -249,7 +254,7 @@ If player 1 or player 2 or player 3 is right, the game is over and while loop br
 Else, stay in the loop and ask the players for another guess.
 
 
-# Running The Guessing Game
+### Running The Guessing Game
 
 ````java
 
@@ -270,6 +275,19 @@ public class GameLauncher {
 }
 
 ````
+
+Summary: 
+
+The guessing game involves a 'game' object and three 'player' objects. The game generates a random number between 0 and 9, and the three player objects try to guess it.
+
+--------------------------------------------------------
+The Logic: 
+
+1) The GameLauncher class is where the application starts; it has the main() method.
+
+2) In the main() method, a GuessGame object is created, and its startGame() method is called.
+
+3) The GuessGame object's startGame() method is where the entire game plays out. It creates three players, then "thinks" of a randon number (the target for the players to guess). It then asks each player to guess, check the results, and either prints out information about the winning player(s) or ask them to guess again.
 
 
 # Who am I?
