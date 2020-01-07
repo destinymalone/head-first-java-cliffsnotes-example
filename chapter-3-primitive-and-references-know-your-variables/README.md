@@ -18,17 +18,7 @@ Exercises and puzzles
 
 ## How do you declare a variable?
 
-Java cares about type.
-
-A floating point number can not go into an integer variable, unless you acknowledge to the compiler that you know you might lose precision (like everything after the decimal point)
-
-Variables come in two flavors: primitive and object reference.
-
-Primitives hold fundamental values including integers, booleans, and floating point numbers.
-
-Object references hold references to objects.
-
-Two declaration ruls to follow: cariables must have a type and variables must have a name.
+Java cares about type. A floating point number can not go into an integer variable, unless you acknowledge to the compiler that you know you might lose precision (like everything after the decimal point). Variables come in two flavors: primitive and object reference. Primitives hold fundamental values including integers, booleans, and floating point numbers, but object references hold references to other objects. There are two declaration rules to follow: variables must have a type and variables must have a name.
 
 ````java
 
@@ -75,6 +65,8 @@ double: 64
 
 ## What primitive types are there?
 
+Below is a list of the different primitive types, their bit depth, and value range.
+
 Type      Bit Depth     Value Range
 
 boolean    true/false     true/false
@@ -87,6 +79,8 @@ float      32 bits        varies
 double     64 bits        varies
 
 ## What does primitive declarations with assignments look like?
+
+Below is an example of what each primitive type lookes like in Java.
 
 ````java
 
@@ -300,7 +294,7 @@ enum
 
 ````
 
-## How can you control your Dog object?
+### How can you control your Dog object?
 
 You know how to declare a primitive variable and assign it to a value.
 
@@ -348,11 +342,11 @@ This means, "use the object referenced by the variable myDog to invoke the bark(
 
 Whe you use the dot operator on an object reference variable, think of it like pressing a button on the remote control for that object.
 
-## Is an object reference is just another variable value?
+## Is an object reference just another variable value?
 
-Something that goes in a cup.
+We have a cup and know that something has to go in the cup, only this time, the value is a remote control.
 
-Only this time, the value is a remote control.
+Below is just a reminder of the primitive types and their bit depth.
 
 byte: 8
 
@@ -365,7 +359,7 @@ long: 64
 reference: remote control  (bit depth not relevant)
 
 
-Primitive Variable--
+Primitive Variable--Java visual
 
 ````java
 
@@ -375,7 +369,10 @@ byte x = 7;
 
 The bits representing 7 go into the variable. (00000111).
 
-Reference Variable--
+
+
+
+Reference Variable--Java visual
 
 ````java
 
@@ -383,19 +380,13 @@ Dog myDog = new Dog();
 
 ````
 
-The bits representing a way to get to the Dog object go into the variable.
-
-The Dog object itself does not fo into the variable
+The bits representing a way to get to the Dog object go into the variable. The Dog object itself does not go into the variable
 
 ### Note
 
-With primitive variables, the value of the variable is....the value (5, -26.7, 'a').
+With primitive variables, the value of the variable is....the value (5, -26.7, 'a'). With reference variables, the value of the variable is...bits representing a way to get to a specific object. You don't know (or care) how any particular JVM implements object references. Sure, they might be a pointer to a pointer to...etc. but even if you know, you still can't use the bits for anything other than accessing an object.
 
-With reference variables, the value of the variable is...bits representing a way to get to a specific object.
-
-You don't know (or care) how any particular JVM implements object references. Sure, they might be a pointer to a pointer to...but even if you know, you still can't use the bits for anything other than accessing an object.
-
-## Can you explain the 3 steps of object: declaration, creation, and assignment
+## Can you explain the 3 steps of object: declaration, creation, and assignment?
 
 ````java
 
@@ -526,7 +517,7 @@ You can have an array object that's declared to "hold" primitive values. In othe
 Regardless of what the array holds, the array itself is always an object!
 
 
-## Code Magnets
+### Code Magnets
 
 ````java
 
@@ -575,16 +566,5 @@ island = Azores
 
 # Overview
 
-Variables come in two flavors: primitive and reference.
-
-Variables must always be declared with a name and a type.
-
-A primitive variable value is the bits representing the value (5, 'a', true, 3.1416, etc.)
-
-A reference variable value is the bits representing a way to get to an object on the heap.
-
-A reference variable is like a remote control. Using the dot operator (.) on a reference variable is like pressing a button on the remote control to access a method or instanec variable.
-
-A reference variable has a value of "null" when it is not referencing any object.
-
-An array is always an object, even if the array is declared to hold primitives. There is no such thing as a primitive array, only an array that "hold"s primitives.
+Variables come in two flavors: primitive and reference. Variables must always be declared with a name and a type. A primitive variable value is the bits representing the value (5, 'a', true, 3.1416, etc.) but, a reference variable value is the bits representing a way to get to an object on the heap.
+Think of a reference variable as a remote control. Using the dot operator (.) on a reference variable, is like pressing a button on the remote control to access a method or instanec variable. Remember, a reference variable has a value of "null" when it is not referencing any object. Arrays are always an object, even if the array is declared to hold primitives. There is no such thing as a primitive array, only an array that "hold"s primitives.
