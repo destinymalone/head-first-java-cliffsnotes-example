@@ -245,7 +245,7 @@ a-b c-d
 
 # Overview
 
-Java has an overall source file that holds each class. Inside of that source file, there are classes that use methods to give instructions for how the finishing product should be produced. Methods work as a function or procedure that gets every detail defined for the main "function" to carry. The methods may consist of print statements, loops, and so forth. If/while/do-while statements are used to produce a boolean and you would help the user understand the work by printing a message which simply explains that the if/while/do-while statement, which was used to test work, was either true or false. Branching is used when testing code. if/while/do-while--Do this if it is true, else do something different without touching the lines associated with true statements.
+Java has an overall source file that holds each class. Inside of that source file, there are classes that use methods to give instructions on how the finishing product should be produced. Methods work as a function or procedure that gets every detail defined for the main "function" to carry. The methods may consist of print statements, loops, and so forth. If/while/do-while statements are used to produce a boolean and you would help the user understand the work by printing a message which simply explains that the if/while/do-while statement, which was used to test work, was either true or false. Branching is used when testing code. if/while/do-while--Do this if it is true, else do something different without touching the lines associated with true statements.
 
 
 
