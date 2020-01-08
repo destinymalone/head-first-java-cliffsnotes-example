@@ -4,6 +4,7 @@
 
 ## Table of Contents
 
+Overview
 Declaring a variable (Java cares about type)
 Primitive types ("I'd like a double with extra foam, please")
 Java keywords
@@ -12,9 +13,6 @@ Object declaration and assignment
 Objects on the garbage-collectible heap
 Arrays (a first look)
 Exercises and puzzles
-
-
-#### Each lesson within chapter 3 is completed and explained in order
 
 ## How do you declare a variable?
 
@@ -36,12 +34,7 @@ When you see a statement like: "an object of type X", think of type and class as
 
 ### "I'd like a double mocha, no, make it an int"
 
-When you think of Java variables, think of cups. Coddee cups, tea cups, giant cups that hold lots and lots of liquids.
-A variable is just a cup. A container. It holds something.
-
-It has a size and a type. Primitives are like the cups they have at the coffeehouse. They come in different sizes, and each has a name like "small", "short", "tall", "grande"
-
-And in Java, primitives come in different sizes, and those sizes have names. When you declare a variable in Java, you must declare it with a specific type. 
+When you think of Java variables, think of cups. Coffee cups, tea cups, giant cups that hold lots and lots of liquids. A variable is just a cup. A container. It holds something, has a size and a type. In Java, primitives come in different sizes, and those sizes have names. Primitives are like the cups they have at the coffeehouse. They come in different sizes, and each has a name like "small", "short", "tall", "grande". When you declare a variable in Java, you must declare it with a specific type. 
 
 "long", "int", "short", "byte"
 
@@ -67,16 +60,16 @@ double: 64
 
 Below is a list of the different primitive types, their bit depth, and value range.
 
-Type      Bit Depth     Value Range
-
-boolean    true/false     true/false
-char       16 bits        0 to 65535
-byte       8 bits         -128 to 127
-short      16 bits        -32768 to 32767
-int        32 bits        -2147483648 to 2147483647
-long       64 bits        -huge to huge
-float      32 bits        varies
-double     64 bits        varies
+|Type   |  Bit Depth   |       Value Range         |
+|-------|--------------|---------------------------|
+|boolean |  true/false |        true/false         |
+|char    |   16 bits   |        0 to 65535         |
+|byte    |   8 bits    |        -128 to 127        |
+|short   |   16 bits   |        -32768 to 32767    |
+|int     |   32 bits   |  -2147483648 to 2147483647|
+|long    |   64 bits   |        -huge to huge      |
+|float   |   32 bits   |        varies             |
+|double  |   64 bits   |        varies             |
 
 ## What does primitive declarations with assignments look like?
 
