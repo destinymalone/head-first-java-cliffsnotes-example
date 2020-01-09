@@ -15,7 +15,7 @@ Exercises and puzzles
 
 #### Each lesson within chapter 4 is completed and explained in order
 
-## Remeber: a class describes what an object knows and what an object does
+## Remember: a class describes what an object knows and what an object does
 
 As I told you before, a class is the blueprint for an object. When writing a class, you're describing how the JVM should make an object of that type. You already know that every object of that type can have different instance variable values.
 
@@ -208,7 +208,7 @@ Now, we change the value of z inside the method. The value of x doesn't change! 
 
 ### Note:
 
-Remeber: Java cares about type! You can't return a Giraffe when the return type is declared as a Rabbit. Same thing with parameters. You can't pass a Giraffe into a method that takes a Rabbit.
+Remember: Java cares about type! You can't return a Giraffe when the return type is declared as a Rabbit. Same thing with parameters. You can't pass a Giraffe into a method that takes a Rabbit.
 
 ## What cool things can you do with parameters and return types?
 
@@ -258,7 +258,7 @@ theCat.height = 27;
 
 ````
 
-Think about the idea of using our remote control to make a direct change to the Cat object's size instance variable. In the hands of the wrong person, a reference variable (remote control) is quite a dangerours weapon. We can prevent changes being made like:
+Think about the idea of using our remote control to make a direct change to the Cat object's size instance variable. In the hands of the wrong person, a reference variable (remote control) is quite a dangerous weapon. We can prevent changes being made like:
 
 ````java
 
@@ -270,7 +270,7 @@ This would be a Bad Thing. We need to build setter methods for all the instance 
 
 ### Hide the data
 
-Yes it is that simple to go from an implemention that's just begging for bad data to one that protects your data and protects your right to modify your implementation later. How exactly do you hide the data? With the public and private access modifiers. You're familiar with public-we use it with every main method. Here's an encapsulation starter rule of thumb (all standard disclaimers about rules of thumb are in effect): mark your instance variables private and provide public getters and setters for access control.
+Yes it is that simple to go from an implementation that's just begging for bad data to one that protects your data and protects your right to modify your implementation later. How exactly do you hide the data? With the public and private access modifiers. You're familiar with public-we use it with every main method. Here's an encapsulation starter rule of thumb (all standard disclaimers about rules of thumb are in effect): mark your instance variables private and provide public getters and setters for access control.
 
 ### Encapsulating in GoodDog class
 
@@ -392,4 +392,4 @@ This will not compile! You can declare 'x' without a value, but as soon as you t
 
 ## Overview
 
-Classes define what an object knows and what an object does. Things an objects knows are its instance variables(state). Things an object does are its methods(behaviors). Methods can use instance variables so that objects of the same method type can behave differently. A method can have parameters, which means you can pass one or more values in to the method. The number and type of values you pass must match in the order and type of the parameters declared by the method. Values passed in and out of methods can be implicitly promted to a larger type or explicitly can to a smaller type. The value you pass as an argument to a method can be a literal value (2, 'c', etc.) or a variable of the declared parameter type (for example, x where x is an int variable). A method must declare a return type. A void return type means the method doesn't return anything. If a method declares a non-void return type, it must return a value compatible with the declared return type.
+Classes define what an object knows and what an object does. Things an objects knows are its instance variables(state). Things an object does are its methods(behaviors). Methods can use instance variables so that objects of the same method type can behave differently. A method can have parameters, which means you can pass one or more values in to the method. The number and type of values you pass must match in the order and type of the parameters declared by the method. Values passed in and out of methods can be implicitly promoted to a larger type or explicitly can to a smaller type. The value you pass as an argument to a method can be a literal value (2, 'c', etc.) or a variable of the declared parameter type (for example, x where x is an int variable). A method must declare a return type. A void return type means the method doesn't return anything. If a method declares a non-void return type, it must return a value compatible with the declared return type.
