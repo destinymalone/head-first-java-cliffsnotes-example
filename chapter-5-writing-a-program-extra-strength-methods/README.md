@@ -418,13 +418,13 @@ System.out.println("done");
 
 ### The enhanced for loop
 
-There is a second kind of "for" loop called the enhanced for, that makes it easier to iterate over all the elements in an array or other kinds of collections. 
+There is a second kind of "for" loop called the enhanced for, that makes it easier to iterate over all the elements in an array or other kinds of collections.
 
-````java
+```java
 
 for (String name: nameArray) { }
 
-````
+```
 
 `String` - The elements in the array must be compatible with the declared variable type.
 
@@ -437,6 +437,67 @@ for (String name: nameArray) { }
 `{ }` - The code to repeat goes here (the body).
 
 What this is actually saying is, "For each element in nameArray, assign the element to the 'name' variable, and run the body of the loop."
+
+### What the compiler sees
+
+Create a String variable called `name` and set it to `null`. Assign the first value in `nameArray` to `name`. Run the body of the loop (the code block bounded by curly braces). Assign the next value in `nameArray` to `name`. And, repeat while there are still elements in the array.
+
+### Note:
+
+Depending on the programming language they've used in the past, some people refer to the `enhanced for` loop as the "for each" or the "for in" loop, because that's how it reads: "for EACH thing IN the collection....".
+
+## Casting primitives
+
+In chapter 3, we talked about the sizes of the various primitives, and how you can't shove a big thing directly into a small thing:
+
+````java
+
+long y = 42;
+
+int x = y;
+
+````
+
+A `long` is bigger than an `int` and the compiler can't be sure where that `long` has been. It might have gathered very big values by the time it was assigned to an `int`. To force the compiler to jam the value of a bigger primitive variable into a smaller one, you can use the `cast` operator. It looks like this:
+
+````java
+
+long y = 42;
+
+int x = (int) y;
+
+````
+Putting in the `cast` tells the compiler to take the value of `y`, chop it down to `int` size, and set `x` equal to whatever is left. If the value of `y` was bigger than the maximum value of `x`, then what's left will be a weird (but 'calculable') number.
+
+````java
+
+long y = 40002;
+
+// 40002 exceed the 16-bit limit of a short
+
+short x = (short) y;
+
+// x now equals -25534!
+
+// The point is that the compiler still lets you cast it.
+
+````
+
+#### What if I have a float?
+
+````java
+
+float f = 3.14f;
+
+int x = (int) f;
+
+// x will equal 3
+
+// You would do this, if you have a float and just want the whole number part (because you chose to use int)
+````
+### Note:
+
+You can not cast anything to a boolean or vice versa. It involves sign bits, binary, and other factors that you do not know yet.
 
 
 # Overview
