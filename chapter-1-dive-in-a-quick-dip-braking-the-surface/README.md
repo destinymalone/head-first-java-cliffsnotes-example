@@ -14,6 +14,7 @@
 - Phrase-o-matic
 - Fireside chat: compiler vs. JVM
 - Exercises and puzzles
+- Overview
 
 **Each lesson within chapter 1 is completed and explained in order.**
 

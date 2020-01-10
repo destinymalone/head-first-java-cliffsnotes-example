@@ -4,15 +4,15 @@
 
 ## Table of Contents
 
-Overview
-Declaring a variable (Java cares about type)
-Primitive types ("I'd like a double with extra foam, please")
-Java keywords
-Reference variables (remote control to an object)
-Object declaration and assignment
-Objects on the garbage-collectible heap
-Arrays (a first look)
-Exercises and puzzles
+- Declaring a variable (Java cares about type)
+- Primitive types ("I'd like a double with extra foam, please")
+- Java keywords
+- Reference variables (remote control to an object)
+- Object declaration and assignment
+- Objects on the garbage-collectible heap
+- Arrays (a first look)
+- Exercises and puzzles
+- Overview
 
 ## How do you declare a variable?
 

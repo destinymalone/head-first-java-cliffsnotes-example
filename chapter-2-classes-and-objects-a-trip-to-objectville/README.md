@@ -4,14 +4,15 @@
 
 ## Table of Contents
 
-Chair Wars (Brad the OO guy vs. Larry the procedural guy)
-Inheritance (an introduction)
-Overriding methods (an introduction)
-What's in a class? (methods,instance variables)
-Making your first object
-Using main()
-Guessing Game Code
-Exercises and puzzles
+- Chair Wars (Brad the OO guy vs. Larry the procedural guy)
+- Inheritance (an introduction)
+- Overriding methods (an introduction)
+- What's in a class? (methods,instance variables)
+- Making your first object
+- Using main()
+- Guessing Game Code
+- Exercises and puzzles
+- Overview
 
 #### Each lesson within chapter 2 is completed and explained in order
 

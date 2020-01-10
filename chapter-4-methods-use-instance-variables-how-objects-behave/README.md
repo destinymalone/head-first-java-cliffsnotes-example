@@ -4,13 +4,14 @@
 
 ## Table of Contents
 
-Methods use object state (bark different)
-Method arguments and return types
-Pass-by-value (the variable is always copied)
-Getters and Setters
-Encapsulation (do it or risk humiliation)
-Using references in an array
-Exercises and puzzles
+- Methods use object state (bark different)
+- Method arguments and return types
+- Pass-by-value (the variable is always copied)
+- Getters and Setters
+- Encapsulation (do it or risk humiliation)
+- Using references in an array
+- Exercises and puzzles
+- Overview
 
 
 #### Each lesson within chapter 4 is completed and explained in order
