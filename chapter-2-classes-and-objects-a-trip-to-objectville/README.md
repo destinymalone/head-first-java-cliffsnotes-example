@@ -11,7 +11,7 @@ What's in a class? (methods,instance variables)
 Making your first object
 Using main()
 Guessing Game Code
-Excercises and puzzles
+Exercises and puzzles
 
 #### Each lesson within chapter 2 is completed and explained in order
 
@@ -31,7 +31,7 @@ Things (key players):
 
 ### "Who got the Aeron?"
 
-Larry does not use methods when adding code, which affects all of the code and each test that was made previously. Brad uses methods and classes that separate each working code and test, which is not affected when code is suddenly changed or added. So, neither of them recieved the Aeron because there was a third programmer given the task who was able to finish before Larry and Brad.
+Larry does not use methods when adding code, which affects all of the code and each test that was made previously. Brad uses methods and classes that separate each working code and test, which is not affected when code is suddenly changed or added. So, neither of them received the Aeron because there was a third programmer given the task who was able to finish before Larry and Brad.
 
 ### What is OO?--Object Oriented Development in Java
 
@@ -45,7 +45,7 @@ Larry does not use methods when adding code, which affects all of the code and e
 
   Objects have instance variables and methods, but those instance variables and methods are designed as part of the class.
 
-Object Oriented works with superclasses, subclasses, instance variables, methods, andn attributes.
+Object Oriented works with superclasses, subclasses, instance variables, methods, and attributes.
 Objects know instance variables already. The instance variables represent an object's state, which have certain values for objects provided for that type.
 
 What an object does, is known as a method. The methods write the value/output of the given instance variables.
@@ -241,7 +241,7 @@ The Logic:
 
 2. In the main() method, a GuessGame object is created, and its startGame() method is called.
 
-3. The GuessGame object's startGame() method is where the entire game plays out. It creates three players, then "thinks" of a randon number (the target for the players to guess). It then asks each player to guess, check the results, and either prints out information about the winning player(s) or ask them to guess again.
+3. The GuessGame object's startGame() method is where the entire game plays out. It creates three players, then "thinks" of a random number (the target for the players to guess). It then asks each player to guess, check the results, and either prints out information about the winning player(s) or ask them to guess again.
 
 ### Who am I?
 
