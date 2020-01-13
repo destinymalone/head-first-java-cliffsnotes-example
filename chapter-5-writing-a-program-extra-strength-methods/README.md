@@ -35,7 +35,7 @@ User starts the game:
 Game creates three Dot Coms. Game places the three Dot Coms onto a virtual grid.
 
 Game play begins:
-Promp user for a guess ("A2, C0, A3, C5, etc."). Check the user guess against all Dot Coms to look for a hit, miss, or kill. Take appropriate action: if a hit, delete cell ("A2, D4, etc.). If a kill, delete Dot Com.
+Prompt the user for a guess ("A2", "C0", "A3", "C5", etc.). Check the user guess against all Dot Coms to look for a hit, miss, or kill. Take appropriate action: If a hit, delete cell ("A2", "D4", etc.). If a kill, delete Dot Com.
 
 Game finishes:
 Give the user a rating based on the number of guesses.
@@ -315,7 +315,7 @@ int randomNum - We declare an int variable to hold the random number we got back
 
 random() - A method of the Math class
 
-(() * 5) - The Math.random method returns a number from 0 to just less than 1. So this formula (with the cast), returns a number from 0 to 4 (0 - 4.9999999999, cast to an int and drop numbers after the decimal).
+(() \* 5) - The Math.random method returns a number from 0 to just less than 1. So this formula (with the cast), returns a number from 0 to 4 (0 - 4.9999999999, cast to an int and drop numbers after the decimal).
 
 #### getUserInput()
 
