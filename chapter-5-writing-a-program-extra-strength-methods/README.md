@@ -266,7 +266,7 @@ public class SimpleDotCom {
 
 ### What should we see when we run this code?
 
-The test code makes a SimpleDotCom object and gives it a location at 2,3,4. Then it sends a fake user guess of "2" into the checkYourself() method. If the code is working correctly, we should see the result print out: java SimpleDotComTestDrive ~ hit
+The test code makes a `SimpleDotCom` object and gives it a location at `2,3,4`. Then it sends a fake user guess of "2" into the `checkYourself()` method. If the code is working correctly, we should see the result print out: java `SimpleDotComTestDrive` ~ hit
 
 ## The game's main() method
 
