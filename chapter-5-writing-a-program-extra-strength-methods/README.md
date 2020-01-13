@@ -66,43 +66,43 @@ Declare a setLocationCell() setter method that takes an int array (which has the
 
 ---
 
-Method: String checkYourself(String userGuess)
+    Method: String checkYourself(String userGuess)
 
-    Get the user guess to an int
+        Get the user guess to an int
 
-    Convert the user guess to an int
+        Convert the user guess to an int
 
-    Repeat with each other of the location cells in the int array
+        Repeat with each other of the location cells in the int array
 
-        <!-- Compare the user guess to the location cell -->
+            <!-- Compare the user guess to the location cell -->
 
-        If the user guess matcher
+            If the user guess matcher
 
-            Increment the number of hits
+                Increment the number of hits
 
-            <!-- Find out if it was the last location cell: -->
+                <!-- Find out if it was the last location cell: -->
 
-            If number of hits is 3, return "kill" as the result
+                If number of hits is 3, return "kill" as the result
 
-            Else it was not a kill, so return "hit"
+                Else it was not a kill, so return "hit"
+
+                End if
+
+            Else the user guess did not match, so return "miss"
 
             End if
 
-        Else the user guess did not match, so return "miss"
+        End repeat
 
-        End if
+    End method
 
-    End repeat
+    Method: void setLocationCells(int[] cellLocations)
 
-End method
+        Get the cell location as an int array parameter
 
-Method: void setLocationCells(int[] cellLocations)
+        Assign the cell locations parameter to the cell locations instance variables
 
-    Get the cell location as an int array parameter
-
-    Assign the cell locations parameter to the cell locations instance variables
-
-End method
+    End method
 
 ## What should I know about writing the method implementations?
 
@@ -112,35 +112,35 @@ If the checkYourself() method were implements, what test code could I write that
 
 Based on this prepcode:
 
-Method: String checkYourself(String userGuess)
+    Method: String checkYourself(String userGuess)
 
-    Get the user guess as a String parameter
+        Get the user guess as a String parameter
 
-    Convert the user guess to an int
+        Convert the user guess to an int
 
-    Repeat with each of the location cells in the int array
+        Repeat with each of the location cells in the int array
 
-        <!-- Compare the user guess to the location cell -->
+            <!-- Compare the user guess to the location cell -->
 
-        If the user guess matches
+            If the user guess matches
 
-            Increment the number of hits
+                Increment the number of hits
 
-            <!-- Find out if it was the last location cell -->
+                <!-- Find out if it was the last location cell -->
 
-            If number of hits is 3, return "Kill" as the result
+                If number of hits is 3, return "Kill" as the result
 
-            Else it was not a kill, so return "Hit"
+                Else it was not a kill, so return "Hit"
+
+                End if
+
+            Else the user guess did not match, so return "Miss"
 
             End if
 
-        Else the user guess did not match, so return "Miss"
+        End repeat
 
-        End if
-
-    End repeat
-
-End method
+    End method
 
 Here is what we should test:
 
@@ -315,7 +315,7 @@ int randomNum - We declare an int variable to hold the random number we got back
 
 random() - A method of the Math class
 
-(() \* 5) - The Math.random method returns a number from 0 to just less than 1. So this formula (with the cast), returns a number from 0 to 4 (0 - 4.9999999999, cast to an int and drop numbers after the decimal).
+(() * 5) - The Math.random method returns a number from 0 to just less than 1. So this formula (with the cast), returns a number from 0 to 4 (0 - 4.9999999999, cast to an int and drop numbers after the decimal).
 
 #### getUserInput()
 
@@ -451,26 +451,27 @@ Depending on the programming language they've used in the past, some people refe
 
 In chapter 3, we talked about the sizes of the various primitives, and how you can't shove a big thing directly into a small thing:
 
-````java
+```java
 
 long y = 42;
 
 int x = y;
 
-````
+```
 
 A `long` is bigger than an `int` and the compiler can't be sure where that `long` has been. It might have gathered very big values by the time it was assigned to an `int`. To force the compiler to jam the value of a bigger primitive variable into a smaller one, you can use the `cast` operator. It looks like this:
 
-````java
+```java
 
 long y = 42;
 
 int x = (int) y;
 
-````
+```
+
 Putting in the `cast` tells the compiler to take the value of `y`, chop it down to `int` size, and set `x` equal to whatever is left. If the value of `y` was bigger than the maximum value of `x`, then what's left will be a weird (but 'calculable') number.
 
-````java
+```java
 
 long y = 40002;
 
@@ -482,11 +483,11 @@ short x = (short) y;
 
 // The point is that the compiler still lets you cast it.
 
-````
+```
 
 #### What if I have a float?
 
-````java
+```java
 
 float f = 3.14f;
 
@@ -495,11 +496,11 @@ int x = (int) f;
 // x will equal 3
 
 // You would do this, if you have a float and just want the whole number part (because you chose to use int)
-````
+```
+
 ### Note:
 
 You can not cast anything to a boolean or vice versa. It involves sign bits, binary, and other factors that you do not know yet.
-
 
 # Overview
 
