@@ -50,19 +50,19 @@ In the simple version, the game class has no instance variables, and all the gam
 
 ### Developing a Class
 
-We start with prepcode. Most prepcode include three parts: instance variable declarations, method declarations, and method logic. The most important part of prepcode is the method logic, because it defines what has to happen, which will later translate into how, when we actually write the method code.
+We start with prepcode. Most prepcode include three parts: instance variable declarations, method declarations, and method logic. The most important part of prepcode is the method logic because it defines what has to happen, which will later translate into how, when we actually write the method code.
 
 ---
 
-Declare an int array to hold the location cells, Call it locationCells.
+Declare an int array to hold the location cells, Call it `locationCells`.
 
-Declare an int to hold the number of hits. Call is numOfHits and SET it to 0.
+Declare an int to hold the number of hits. Call `numOfHits` and `SET` it to 0.
 
 ---
 
-Declare a checkYourself() method that takes a String for the user's guess ("1", "3", etc.), checks it, and returns a result representing a "hit", "miss", or "kill".
+Declare a `checkYourself()` method that takes a String for the user's guess ("1", "3", etc.), checks it and returns a result representing a `hit`, `miss`, or `kill`.
 
-Declare a setLocationCell() setter method that takes an int array (which has the three cell locations as ints (2, 3, 4, etc.).
+Declare a `setLocationCell()` setter method that takes an int array (which has the three cell locations as ints (2, 3, 4, etc.)).
 
 ---
 
@@ -106,9 +106,9 @@ Declare a setLocationCell() setter method that takes an int array (which has the
 
 ## What should I know about writing the method implementations?
 
-We start with writing test code next. This is called Extreme Programming, which is a method that was used to allow code to be written and tested much quicker. So, we need to write test code that can make a SimpleDotCom object and run its methods. For the SimpleDotCom class, we only care about the checkYourself() method, although we will have to implement the other methods in order to get the checkYourself() method to run correctly.
+We start with writing test code next. This is called `Extreme Programming`, which is a method that was used to allow code to be written and tested much quicker. So, we need to write test code that can make a `SimpleDotCom` object and run its methods. For the `SimpleDotCom` class, we only care about the `checkYourself()` method, although we will have to implement the other methods in order to get the `checkYourself()` method to run correctly.
 
-If the checkYourself() method were implements, what test code could I write that would prove to me the method is working correctly?
+If the `checkYourself()` method were implemented, what test code could I write that would prove to me the method is working correctly?
 
 Based on this prepcode:
 
@@ -144,7 +144,7 @@ Based on this prepcode:
 
 Here is what we should test:
 
-Instantiate a SimpleDotCom object. Assign it a location (an array of 3 ints, like {2,3,4}). Create a String to represent a user guess("2", "0", etc.). Invoke the checkYourself() method passing it the fake user guess. Print out the result to see if it's correct("passed" or "failed").
+Instantiate a `SimpleDotCom` object. Assign it a location (an array of 3 ints, like {2,3,4}). Create a `String` to represent a user guess("2", "0", etc.). Invoke the `checkYourself()` method passing it the fake user guess. Print out the result to see if it's correct("passed" or "failed").
 
 ```java
 
@@ -180,9 +180,11 @@ Integer.parseInt("3");
 
 ```
 
-Integer: A class that ships with Java
-parseInt: A method in the Integer class that knows how to "parse" a String into the int it represents.
-("3"): Takes a String
+`Integer`: A class that ships with Java.
+
+`parseInt`: A method in the Integer class that knows how to "parse" a String into the int it represents.
+
+`("3")`: Takes a String.
 
 ```java
 
@@ -190,13 +192,13 @@ for (int cell:locationCells) { }
 
 ```
 
-for - Read this for loop declaration as "repeat for each element in the 'locationCells array: take the element in the array and assign it to the in variable 'cell'."
+`for` - Read this for loop declaration as "repeat for each element in the 'locationCells array: take the element in the array and assign it to the in variable 'cell'."
 
-(int cell) - Declare a variable that will hold one element from the array. Each time through the loop, this variable (in this case an int variable named "cell"), will hold a different element from the array, until there are no more elements (or the code does a "break").
+`(int cell)` - Declare a variable that will hold one element from the array. Each time through the loop, this variable (in this case an int variable named "cell"), will hold a different element from the array, until there are no more elements (or the code does a "break").
 
-: - The colon means "in", so the whole thing means "for each int value IN locationCells..."
+`:` - The colon means "in", so the whole thing means "for each int value IN locationCells..."
 
-locationCells - The array to iterate over in the loop. Each time through the loop, the next element in the array will be assigned to the variable "cell".
+`locationCells` - The array to iterate over in the loop. Each time through the loop, the next element in the array will be assigned to the variable "cell".
 
 ```java
 
@@ -204,7 +206,7 @@ numOfHits++
 
 ```
 
-numOfHits++ is the same (in this case) as saying numOfHits = numOfHits + 1, except slightly more efficient.
+`numOfHits++` is the same (in this case) as saying `numOfHits = numOfHits + 1`, except slightly more efficient.
 
 ```java
 
@@ -268,7 +270,7 @@ The test code makes a SimpleDotCom object and gives it a location at 2,3,4. Then
 
 ## The game's main() method
 
-Just as we did with the SimpleDotCom class, think about parts of the following code you might need to improve.
+Just as we did with the `SimpleDotCom` class, think about parts of the following code you might need to improve.
 
 ```java
 
@@ -303,33 +305,33 @@ public static void main(String[] args) {
 
 ```
 
-Now, let's talk about "random()" and "getUserInput()".
+Now, let's talk about `ranom()` and `getUserInput()`.
 
 #### random()
 
-int randomNum - We declare an int variable to hold the random number we got back
+`int randomNum` - We declare an int variable to hold the random number we got back
 
-(int) - This is a 'cast', and it forces the thing immediately after it to become the type of the cat (the type in the parenthesis). Math.random returns a double, so we have to cast it to be an int (we want nice whole numbers between 0 and 4). In this case, the cast drops the fraction part of the double.
+`(int)` - This is a 'cast', and it forces the thing immediately after it to become the type of the cat (the type in the parenthesis). Math.random returns a double, so we have to cast it to be an int (we want nice whole numbers between 0 and 4). In this case, the cast drops the fraction part of the double.
 
-(Math) - A class that comes with Java.
+`(Math)` - A class that comes with Java.
 
-random() - A method of the Math class
+`random()` - A method of the Math class
 
-(() \* 5) - The Math.random method returns a number from 0 to just less than 1. So this formula (with the cast), returns a number from 0 to 4 (0 - 4.9999999999, cast to an int and drop numbers after the decimal).
+`(() * 5)` - The Math.random method returns a number from 0 to just less than 1. So this formula (with the cast), returns a number from 0 to 4 (0 - 4.9999999999, cast to an int and drop numbers after the decimal).
 
 #### getUserInput()
 
-String guess - We declare a String variable to hold the user input String we get back ("3", "5", etc.).
+`String guess` - We declare a `String` variable to hold the user input `String` we get back ("3", "5", etc.).
 
-helper - An instance we made earlier, of a class that we built to help with the game. It's called GameHelper and you haven't seen it yet.
+`helper` - An instance we made earlier, of a class that we built to help with the game. It's called `GameHelper` and you haven't seen it yet.
 
-getUserInput - A method of the GameHelper class that asks the user for command line input, reads it in after the user hits RETURN/ENTER, and gives back the result as a String.
+`getUserInput` - A method of the GameHelper class that asks the user for command-line input, reads it in after the user hits RETURN/ENTER, and gives back the result as a String.
 
-("enter a number") - This method takes a String argument that it uses to prompt the user at the command-line. Whatever you pass in here gets displayed in the terminal just before the method starts looking for user input.
+`("enter a number")` - This method takes a String argument that it uses to prompt the user at the command-line. Whatever you pass in here gets displayed in the terminal just before the method starts looking for user input.
 
 ## One last class: GameHelper
 
-We made the dot com class. We made the game class. All that's left is the helper class- the one with the getUserInput() method.
+We made the dot com class. We made the game class. All that's left is the `helper` class, the one with the `getUserInput()` method.
 
 ```java
 
@@ -353,7 +355,7 @@ public class GameHelper {
 
 ```
 
-Take this code, compile it into a class named GameHelper(already done). Drop all three classes (SimpleDotCom, SimpleDotComGame, and GameHelper) into the same directory, and make it your working directory.
+Take this code, compile it into a class named `GameHelper`(already done). Drop all three classes (`SimpleDotCom`, `SimpleDotComGame`, and `GameHelper`) into the same directory, and make it your working directory.
 
 ## Loops, Again
 
@@ -365,17 +367,17 @@ for (int i = 0; i < 100; i++) { }
 
 ```
 
-(int i = 0) - initialization
+`(int i = 0)` - initialization
 
-i < 100 - boolean test
+`i < 100` - boolean test
 
-i++ - iteration expression
+`i++` - iteration expression
 
-{ } - the code to repeat goes here (the body)
+`{ }` - the code to repeat goes here (the body)
 
 ---
 
-What this says is, "Repeat 100 times.". The compiler sees it as: create a variable 'i' and set it to 0, repeat while 'i' is less than 100, at the end of each loop iteration, add 1 to 'i'.
+What this says is, "Repeat 100 times.". The compiler sees it as: create a variable `i` and set it to 0, repeat while `i` is less than 100, at the end of each loop iteration, add 1 to `i`.
 
 ---
 
@@ -397,13 +399,13 @@ System.out.println("done");
 
 ```
 
-Declare int i. Set i to 0. Is i < 8? If true, enter loop body. Print the value of i. Increment i (the iteration expression). Repeat until loop ends. If false, print "done" (jump below loop).
+Declare `int i`. Set i to 0. Is i < 8? If true, enter loop body. Print the value of `i`. Increment `i` (the iteration expression). Repeat until loop ends. If false, print "done" (jump below loop).
 
 ### Difference between for and while
 
-A while loop has only the boolean test; it doesn't have a built-in initialization or iteration expression. A while loop is good when you don't know how many times to loop and just want to keep going while some condition is true. But if you know how many times to loop, a for loop is cleaner.
+A `while` loop has only the boolean test; it doesn't have a built-in initialization or iteration expression. A `while` loop is good when you don't know how many times to loop and just want to keep going while some condition is true. But if you know how many times to loop, a for loop is cleaner.
 
-Code rewritten using while loop:
+Code rewritten using `while` loop:
 
 ```java
 
@@ -419,7 +421,7 @@ System.out.println("done");
 
 ### The enhanced for loop
 
-There is a second kind of "for" loop called the enhanced for, that makes it easier to iterate over all the elements in an array or other kinds of collections.
+There is a second kind of "for" loop called the enhanced for, which makes it easier to iterate over all the elements in an array or other kinds of collections.
 
 ```java
 
@@ -504,4 +506,4 @@ You can not cast anything to a boolean or vice versa. It involves sign bits, bin
 
 # Overview
 
-Your Java program should start with a high-level design. Typically you'll write three things when you create a new class: precode, testcode, real (Java) code. Precode should describe what to do, not how to do it. Implementation comes later. Use the precode to help design the test code. Write test code before you implement the methods. Choose for loops over while loops when you know how many times you want to repeat the loop code. Use the pre/post increment operator to add 1 to a variable (x++;). Use pre/post decrement to subtract 1 from a variable (x--;). Use Integer.parseInt() to get the int value of a String. Integer.parseInt() works only if the String represents a digit ("0", "1", "2", etc.). Last, use break to leave a loop early (even if the boolean test condition is still true).
+Your Java program should start with a high-level design. Typically you'll write three things when you create a new class: precode, testcode, real (Java) code. Precode should describe what to do, not how to do it. Implementation comes later. Use the precode to help design the test code. Write test code before you implement the methods. Choose `for` loops over `while` loops when you know how many times you want to repeat the loop code. Use the pre/post increment operator to add 1 to a variable (x++;). Use pre/post decrement to subtract 1 from a variable (x--;). Use Integer.parseInt() to get the int value of a `String`. `Integer.parseInt()` works only if the String represents a digit ("0", "1", "2", etc.). Last, use break to leave a loop early (even if the boolean test condition is still true).
