@@ -21,29 +21,29 @@
 
 ### Analyzing the bug in the Simple Dot Com Game
 
-In the last chapter, you had a bug with the cliff-hanger. It was supposed to look like when you enter the numbers: 1, 2, 3, 4, 5, 6 --
+In the last chapter, you had a bug with the cliff-hanger. It was supposed to look like when you enter the numbers: '1', '2', '3', '4', '5', '6' --
 
-enter a number - 1
+enter a number - 1:
 miss
-enter a number - 2
+enter a number - 2:
 miss
-enter a number - 3
+enter a number - 3:
 miss
-enter a number - 4
+enter a number - 4:
 hit
-enter a number - 5
+enter a number - 5:
 hit
-enter a number - 6
+enter a number - 6:
 kill
 You took 6 guesses.
 
-When you enter: 2, 2, 2; it is supposed to look like this:
+When you enter: '2', '2', '2'; it is supposed to look like this:
 
-enter a number - 2
+enter a number - 2:
 hit
-enter a number - 2
+enter a number - 2:
 hit
-enter a number - 2
+enter a number - 2:
 kill
 You took 3 guesses.
 
@@ -165,7 +165,7 @@ myList[1] = b;
 
 ```
 
-The list needs and index. If that index is outside the boundaries of the array (like, the array was declared with a size of 2, and now you're trying to assign something to index 3), it blows up at runtime. With ArrayList, you can specify an index using the `add(anInt, anObject)` and the ArrayList will keep growing to make room for the new thing.
+The list needs and index. If that index is outside the boundaries of the array (like, the array was declared with a size of '2', and now you're trying to assign something to index '3'), it blows up at runtime. With ArrayList, you can specify an index using the `add(anInt, anObject)` and the ArrayList will keep growing to make room for the new thing.
 
 ```java
 
