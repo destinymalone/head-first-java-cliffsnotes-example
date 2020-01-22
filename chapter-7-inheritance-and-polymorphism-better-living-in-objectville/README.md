@@ -73,14 +73,17 @@ public class Surgeon extends Doctor {
 ```
 
 Superclass: Doctor
+
 - `worksAtHospital`: (one instance variable)
 - `treatPatient()`: (one method)
 
 Subclass: Surgeon
+
 - `treatPatient()`: (Overrides the inherited treatPatient() method)
 - `makeIncision()`: (Adds one new method)
 
 Subclass: FamilyDoctor
+
 - `makesHouseCalls`: (Adds one new instance variable)
 - `giveAdvice()`: (Adds one new method)
 
@@ -99,6 +102,7 @@ Imagine you're asked to design a simulation program that lets the user throw a b
 5. Finish the class hierarchy. Since animals already have an organizational hierarchy (the whole kingdom, genus, phylum thing), we can use the level that makes the most sense for class design. We'll use the biological "families" to organize the animals by making t=a `Feline` class and a `Canine` class. We decide that `Canines` could use a common `roam()`method, because they tend to move in packs. We also see that `Felines` could use a common `roam()` method, because they tend to avoid others of their own kind. We'll let `Hippo` continue to use its inherited `roam()` method-- the generic one it gets from `Animal`. So we're done with the design for now.
 
 Superclass: Animal
+
 - picture
 - food
 - hunger
@@ -109,36 +113,43 @@ Superclass: Animal
 - sleep()
 - roam()
 
-    Subclass: Feline
-    - roam()
+  Subclass: Feline
 
-        Subclass: Lion
-        - makeNoise()
-        - eat()
+  - roam()
 
-        Subclass: Tiger
-        - makeNoise()
-        - eat()
+    Subclass: Lion
 
-        Subclass: Cat
-        - makeNoise()
-        - eat()
-
-    Subclass: Hippo
     - makeNoise()
     - eat()
 
-    Subclass: Canine
-    - roam()
+    Subclass: Tiger
 
-        Subclass: Wolf
-        - makeNoise()
-        - eat()
+    - makeNoise()
+    - eat()
 
-        Subclass: Dog
-        - makeNoise()
-        - eat()
+    Subclass: Cat
 
+    - makeNoise()
+    - eat()
+
+  Subclass: Hippo
+
+  - makeNoise()
+  - eat()
+
+  Subclass: Canine
+
+  - roam()
+
+    Subclass: Wolf
+
+    - makeNoise()
+    - eat()
+
+    Subclass: Dog
+
+    - makeNoise()
+    - eat()
 
 #### Which method is called?
 
@@ -183,6 +194,7 @@ There's obviously more to it than what we've covered so far. For now, though, a 
 You get a lot of OO mileage by designing with inheritance. You avoid duplicate code by abstracting out the behavior common to a group of classes, and sticking that in a superclass. You will only need to modify in one place instead of all places the behavior is presented. Make the change and compile the class again. You don't have to touch the subclasses! Just deliver the newly-changed superclass, and all classes that extend it will automatically use the new version. As long as the superclass doesn't `break` anything for the subclass, everything's fine. Inheritance lets you guarantee that all classes grouped under a certain supertype have all the methods that the supertype has. In other words, you define a common protocol for a set of classes related through inheritance. When defining methods in a superclass, that can be inherited by other subclasses, you're announcing a kind of protocol to other code that says, "All my subtypes (subclasses) can do these things, with these methods that look like this...". In other words, you established a `contract`. Class Animal establishes a common protocol for all Animal subtypes:
 
 Superclass: Animal
+
 - makeNoise()
 - eat()
 - sleep()
@@ -282,21 +294,21 @@ If I write my code using polymorphic arguments, where I declare the method param
 
 When overriding a method from a superclass, you're agreeing to fulfill the contract. The methods are the contract. If polymorphism is going to work, the Toaster's version of the overridden method from Appliance has to work at runtime. Remember, the compiler looks at the reference type to decide whether you can call a particular method on that reference. With an Appliance reference to a Toaster, the compiler cares only if class `Appliance` has the method you're invoking on an Appliance reference. But at runtime, the JVM looks not at the `reference` type (Appliance) but at the actual `Toaster` object on the heap. If the compiler has already `approved` the method call, the only way it can work is if the overriding method has the same arguments and return types. Otherwise, someone with an Appliance reference will call `turnOn()` as a no-arg method, even though there's a version in Toaster that takes an int. Which one is called at runtime? The one in Appliance. In other words, the `turnOn(int level)` method in Toaster is not an override!
 
-1) Arguments must be the same, and return types must be compatible--Whatever the superclass takes as an argument, the subclass overriding the method must use the same argument. Whatever the superclass declares as a return type, the overriding method must declare either the same typw, or a subclass type.
+1. Arguments must be the same, and return types must be compatible--whatever the superclass takes as an argument, the subclass overriding the method must use the same argument. Whatever the superclass declares as a return type, the overriding method must declare either the same type, or a subclass type.
 
-2) The method can't be less accessible--Access level must be the same, or friendlier. Can't override a public method and make it private.
+2. The method can't be less accessible--Access level must be the same, or friendlier. Can't override a public method and make it private.
 
 #### Overloading a method
 
 It is nothing more than having two methods with the same name but different argument lists. There's no polymorphism involved with overloaded methods! An overloaded method is just a different method that happens to have the same method name. It has nothing to do with inheritance and polymorphism. An overloaded method is NOT the same as an overridden method.
 
-1) The return types can be different--You can change the return types in overloaded methods, as long as the argument lists are different.
+1. The return types can be different--You can change the return types in overloaded methods, as long as the argument lists are different.
 
-2) You can't change ONLY the return type--If the return type is the only difference, the compiler will assume you are overriding the method. Won't work unless the return type is a subtype of the return type declared in the superclass. To overload a method, you MUST change the argument list, although you can change the return type to anything.
+2. You can't change ONLY the return type--If the return type is the only difference, the compiler will assume you are overriding the method. Won't work unless the return type is a subtype of the return type declared in the superclass. To overload a method, you MUST change the argument list, although you can change the return type to anything.
 
-3) You can vary the access levels in any direction--Can overload a method with a method that's more restrictive since the new method isn't obligated to fulfill the contract of the overload method.
+3. You can vary the access levels in any direction--Can overload a method with a method that's more restrictive since the new method isn't obligated to fulfill the contract of the overload method.
 
-````java
+```java
 
 public class Overloads {
     String uniqueID;
@@ -316,8 +328,7 @@ public class Overloads {
     }
 }
 
-````
-
+```
 
 # Overview
 
