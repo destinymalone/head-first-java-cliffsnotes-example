@@ -24,27 +24,27 @@
 In the last chapter, you had a bug with the cliff-hanger. It was supposed to look like when you enter the numbers: '1', '2', '3', '4', '5', '6' --
 
 - enter a number - 1:
-miss
+  miss
 - enter a number - 2:
-miss
+  miss
 - enter a number - 3:
-miss
+  miss
 - enter a number - 4:
-hit
+  hit
 - enter a number - 5:
-hit
+  hit
 - enter a number - 6:
-kill
+  kill
 - You took 6 guesses.
 
 When you enter: '2', '2', '2'; it is supposed to look like this:
 
 - enter a number - 2:
-hit
+  hit
 - enter a number - 2:
-hit
+  hit
 - enter a number - 2:
-kill
+  kill
 - You took 3 guesses.
 
 In the current version, once you get a hit, you can simply repeat that hit two more times to get a kill! So what happened?
@@ -309,7 +309,7 @@ B) DotComBust class (the game): Create three DotComs instead of one. Give each o
 
 ### The DotComBust code
 
-````java
+```java
 
 import java.util.*;
 
@@ -415,11 +415,11 @@ public class DotComBust {
     }
 }
 
-````
+```
 
 #### The final version of the DotCom class
 
-````java
+```java
 
 import java.util.*;
 
@@ -460,7 +460,7 @@ public class DotCom {
     }
 }
 
-````
+```
 
 ### Super Powerful Boolean Expressions
 
@@ -468,37 +468,37 @@ So far, we've used boolean expressions for our loops or `if` tests, they've been
 
 #### 'And' and 'Or' Operators ( &&, || )
 
-Let's say you're writing a `chooseCamera()` method, with lots of rules about which camera to select. Maybe you can choose cameras ranging from $50 to $1000, but in some cases you want to limit the price range more precisely. You want to say something like: 
+Let's say you're writing a `chooseCamera()` method, with lots of rules about which camera to select. Maybe you can choose cameras ranging from $50 to $1000, but in some cases you want to limit the price range more precisely. You want to say something like:
 
 'If the price `range` is between $300 `and` $400 then choose X.'
 
-````java
+```java
 
 if (price >= 300 && price < 400) {
     camera = "X";
 }
 
-````
+```
 
 Let's say that of the ten camera brands available, you have some logic that applies to only a `few` of the list:
 
-````java
+```java
 
 if (brand.equals("A") || brand.equals("B")) {
     // do stuff for only brand A or brand B
 }
 
-````
+```
 
 Boolean expressions can get really big and complicated:
 
-````java
+```java
 
 if ((zoomType.equals("optical") && (zoomDegree >= 3 && zoomDegree <= 8)) || (zoomType.equals("digital") && (zoomDegree >= 5 && zoomDegree <= 12))) {
     // do appropriate zoom stuff
 }
 
-````
+```
 
 If you want to get really technical, you might wonder about the precedence of these operators. Instead of becoming an expert in the arcane world of precedence, we recommend that you use parentheses to make your code clear.
 
@@ -506,23 +506,23 @@ If you want to get really technical, you might wonder about the precedence of th
 
 Let's say that you have a logic like, "Of the ten available camera models, a certain thing is `true` for all but one."
 
-````java
+```java
 
 if (model != 2000) {
     // do non-model 2000 stuff
 }
 
-````
+```
 
 Or for comparing objects like strings....
 
-````java
+```java
 
 if (!brand.equals("X")) {
     // do non-brand X stuff
 }
 
-````
+```
 
 #### Short Circuit Operators ( &&, || )
 
@@ -532,13 +532,13 @@ Similarly, with `||`, the expression will be true if `either` side is true, so i
 
 This is great! Let's say that you have a reference variable and you're not sure whether it's been assigned to an object. If you try to call a method using this null reference variable (no object has been assigned), you'll get a NullPointerException. So ,try this:
 
-````java
+```java
 
 if (refVar != null && refVar.isValidType()) {
     // do 'got a valid type' stuff
 }
 
-````
+```
 
 #### Not Short Circuit Operators ( &, | )
 
@@ -552,7 +552,7 @@ This is the helper class for the game. Besides the user input method (that promp
 
 For extra credit, you might try 'un-commenting' the System.out.print(ln)'s in the placeDotCom() method, just to watch it work! These print statements will let you "cheat" by giving you the location of the DotComs, but it will help you test it.
 
-````java
+```java
 
 import java.io.*;
 import java.util.*;
@@ -643,7 +643,7 @@ public class GameHelper {
     }
 }
 
-````
+```
 
 ### Using the Library (the Java API)
 
@@ -651,55 +651,54 @@ You made it through the DotComBust game, thanks to the help of `ArrayList`. And 
 
 In the Java API, classes are grouped into packages. To use a class in the API, you have to know which `package` the class is in. Every class in the Java library belongs to a package. The package has a name, like `javax.swing` (a package that holds some of the Swing GUI classes). `ArrayList` is in the package called `java.util`, which holds a pile of `utility` classes. Usin ga class from the API, in your own code, is simple. You just treat the class as though you wrote it yourself... as though you compiled it, there it sits, waiting to be used. With one big difference: somewhere in your code you have to indicate the `full` name of the library class you want to use, and that means package name + class name. Even if you didn't know it, you've already been using classes from a package. System (System.out.println), String, and Math(Math.random()), al belong to the `java.lang` package.
 
-### You have to know the full name* of the class you want to use in your code.
+### You have to know the full name\* of the class you want to use in your code.
 
 `ArrayList` is not the full name of `ArrayList`. The full name of `ArrayList` is actually:
 
-````java
+```java
 
 java.util.ArrayList
 
-````
+```
 
 Package name: java.util
 Class name: ArrayList
 
 You have to tell Java which ArrayList you want to use. You have two options: Import or Type. Import: Put an import stament at the top of your source code file:
 
-````java
+```java
 
 import java.util.ArrayList;
 
 public class MyClass{...}
 
-````
+```
 
 Type: Type the full name everywhere in your code. Each time you use it. Anywhere you use it. When you declare and/or instantiate it:
 
-````java
+```java
 
 java.util.ArrayList<Dog> list = new java.util.ArrayList<Dog>();
 
-````
+```
 
 When you use it as an argument type:
 
-````java
+```java
 
 public void go(java.util.ArrayList<Dog> list) { }
 
-````
+```
 
 When you use it as a return type:
 
-````java
+```java
 
 public java.util.ArrayList<Dog> foo() {...}
 
-````
+```
 
-*Unless the class is in the `java.lang` package.
-
+\*Unless the class is in the `java.lang` package.
 
 ### Use the HTML API docs
 
@@ -707,4 +706,4 @@ Java comes with a set of online docs called, the Java API. They're part of a lar
 
 # Overview
 
-`ArrayList` is a class in the Java API. To put something into an `ArrayList`, use `add()`. To remove something from an `ArrayList` use `remove()`. To find out where something is (and if it is) in an `ArrayList`, use `indexOf()`. To find out if an `ArrayList` is empty, use `isEmpty()`. To get the size (number of elements) in an `ArrayList`, use the `size()` method. to get the length (number of elements) in a regular old array, remember, you use the length variable. An `ArrayList` resizes dynamically to whatever size is needed. It grows when objects are added, and it shrinks when objects are removed. You declare the type of the array using a type parameter, which is a type name in angle brackets. Example ArrayList<Button> means the `ArrayList` will be able to hold only objects of type Button (or subclasses of Button). Although an `ArrayList` holds objects and not primitives, the compiler will automatically "wrap" (and "unwrap" when you take it out) a primitive into an `Object`, and place that object in the `ArrayList` instead of the primitive. Classes are grouped into packages. A class has a full name, which is a combination of the package name and the class name. `Class ArrayList` is really `java.util.ArrayList. To use a class in a package other than java.lang, you must tell Java the full name of the class. You use either an important statement at the top of your source code, or you can type the full name every place you use the class in your code.
+`ArrayList` is a class in the Java API. To put something into an `ArrayList`, use `add()`. To remove something from an `ArrayList` use `remove()`. To find out where something is (and if it is) in an `ArrayList`, use `indexOf()`. To find out if an `ArrayList` is empty, use `isEmpty()`. To get the size (number of elements) in an `ArrayList`, use the `size()` method. to get the length (number of elements) in a regular old array, remember, you use the length variable. An `ArrayList` resizes dynamically to whatever size is needed. It grows when objects are added, and it shrinks when objects are removed. You declare the type of the array using a type parameter, which is a type name in angle brackets. Example ArrayList<Button> means the `ArrayList` will be able to hold only objects of type Button (or subclasses of Button). Although an `ArrayList` holds objects and not primitives, the compiler will automatically "wrap" (and "unwrap" when you take it out) a primitive into an `Object`, and place that object in the `ArrayList` instead of the primitive. Classes are grouped into packages. A class has a full name, which is a combination of the package name and the class name. `Class ArrayList` is really `java.util.ArrayList`. To use a class in a package other than java.lang, you must tell Java the full name of the class. You use either an important statement at the top of your source code, or you can type the full name every place you use the class in your code.
