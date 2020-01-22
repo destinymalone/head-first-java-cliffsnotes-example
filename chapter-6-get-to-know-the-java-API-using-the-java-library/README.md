@@ -526,7 +526,7 @@ if (!brand.equals("X")) {
 
 #### Short Circuit Operators ( &&, || )
 
-The operators we've looked at so far, `&&` and `||`, are known as `short circuit` operators. In the case of `&&`, the expression will be true only if `both` sides of the `&&` are true. So if the JVM sees that the left side of a `&&` expression is false, it stops right there! Doesn't eben bother to look at the right side.
+The operators we've looked at so far, `&&` and `||`, are known as `short circuit` operators. In the case of `&&`, the expression will be true only if `both` sides of the `&&` are true. So if the JVM sees that the left side of a `&&` expression is false, it stops right there! Doesn't even bother to look at the right side.
 
 Similarly, with `||`, the expression will be true if `either` side is true, so if the JVM sees that the left side is true, it declares the entire statement to be true and doesn't bother to check the right side.
 
@@ -649,7 +649,7 @@ public class GameHelper {
 
 You made it through the DotComBust game, thanks to the help of `ArrayList`. And now, it is time to learn how to fool around in the Java library.
 
-In the Java API, classes are grouped into packages. To use a class in the API, you have to know which `package` the class is in. Every class in the Java library belongs to a package. The package has a name, like `javax.swing` (a package that holds some of the Swing GUI classes). `ArrayList` is in the package called `java.util`, which holds a pile of `utility` classes. Usin ga class from the API, in your own code, is simple. You just treat the class as though you wrote it yourself... as though you compiled it, there it sits, waiting to be used. With one big difference: somewhere in your code you have to indicate the `full` name of the library class you want to use, and that means package name + class name. Even if you didn't know it, you've already been using classes from a package. System (System.out.println), String, and Math(Math.random()), al belong to the `java.lang` package.
+In the Java API, classes are grouped into packages. To use a class in the API, you have to know which `package` the class is in. Every class in the Java library belongs to a package. The package has a name, like `javax.swing` (a package that holds some of the Swing GUI classes). `ArrayList` is in the package called `java.util`, which holds a pile of `utility` classes. Using a class from the API, in your own code, is simple. You just treat the class as though you wrote it yourself... as though you compiled it, there it sits, waiting to be used. With one big difference: somewhere in your code you have to indicate the `full` name of the library class you want to use, and that means package name + class name. Even if you didn't know it, you've already been using classes from a package. System (System.out.println), String, and Math(Math.random()), all belong to the `java.lang` package.
 
 ### You have to know the full name\* of the class you want to use in your code.
 
