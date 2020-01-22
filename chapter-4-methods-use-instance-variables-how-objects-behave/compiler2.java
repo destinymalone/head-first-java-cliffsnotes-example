@@ -1,5 +1,5 @@
 class Clock  {
-    String timel
+    String time;
 
     void setTime(String t) {
         time = t;
@@ -22,7 +22,7 @@ class ClockTestDrive {
     }
 }
 
-// Solutiion
+// Solution
 
 class Clock {
     String time;
@@ -39,11 +39,9 @@ class ClockTestDrive {
     public static void main(String[] args) {
         Clock c = new Clock();
 
-        c.setTime("1245");
+        c.setTime("12:45");
 
         String tod = c.getTime();
         System.out.println("time: " + tod);
     }
 }
-
-// Note: 'Getter' methods haave a return type by definition
