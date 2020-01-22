@@ -187,7 +187,7 @@ The `IS-A` test works anywhere in the inheritance tree, if it is well designed. 
 
 #### How do you know if you've got your inheritance right?
 
-There's obviously more to it than what we've covered so far. For now, though, a good guideline is to use the IS-A test/ If "X IS-A Y" makes sense, both classes (X and Y) should probably live in the same inheritance hierarchy. Chances are, they have the same or overlapping behaviors. Keep in mind that the inheritance IS-A relationship works in only one direction! Triangle IS-A Shape makes sense, so you can have Triangle extend Shape. But the reverse--Shape IS-A Triangle--does not make sense, so Shape should not extend Triangle. Remember that the IS-A relationship implies that if X IS-A Y, then X can do anything a Y can do (and possibly more).
+There's obviously more to it than what we've covered so far. For now, though, a good guideline is to use the IS-A test. If "X IS-A Y" makes sense, both classes (X and Y) should probably live in the same inheritance hierarchy. Chances are, they have the same or overlapping behaviors. Keep in mind that the inheritance IS-A relationship works in only one direction! Triangle IS-A Shape makes sense, so you can have Triangle extend Shape. But the reverse--Shape IS-A Triangle--does not make sense, so Shape should not extend Triangle. Remember that the IS-A relationship implies that if X IS-A Y, then X can do anything a Y can do (and possibly more).
 
 ### So what does all this inheritance really buy you?
 
