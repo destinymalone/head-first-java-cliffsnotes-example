@@ -23,29 +23,29 @@
 
 In the last chapter, you had a bug with the cliff-hanger. It was supposed to look like when you enter the numbers: '1', '2', '3', '4', '5', '6' --
 
-enter a number - 1:
+- enter a number - 1:
 miss
-enter a number - 2:
+- enter a number - 2:
 miss
-enter a number - 3:
+- enter a number - 3:
 miss
-enter a number - 4:
+- enter a number - 4:
 hit
-enter a number - 5:
+- enter a number - 5:
 hit
-enter a number - 6:
+- enter a number - 6:
 kill
-You took 6 guesses.
+- You took 6 guesses.
 
 When you enter: '2', '2', '2'; it is supposed to look like this:
 
-enter a number - 2:
+- enter a number - 2:
 hit
-enter a number - 2:
+- enter a number - 2:
 hit
-enter a number - 2:
+- enter a number - 2:
 kill
-You took 3 guesses.
+- You took 3 guesses.
 
 In the current version, once you get a hit, you can simply repeat that hit two more times to get a kill! So what happened?
 
