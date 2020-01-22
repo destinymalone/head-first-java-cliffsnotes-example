@@ -73,16 +73,16 @@ public class Surgeon extends Doctor {
 ```
 
 Superclass: Doctor
-worksAtHospital (one instance variable)
-treatPatient() (one method)
+- `worksAtHospital`: (one instance variable)
+- `treatPatient()`: (one method)
 
 Subclass: Surgeon
-treatPatient() (Overrides the inherited treatPatient() method)
-makeIncision() (Adds one new method)
+- `treatPatient()`: (Overrides the inherited treatPatient() method)
+- `makeIncision()`: (Adds one new method)
 
 Subclass: FamilyDoctor
-makesHouseCalls (Adds one new instance variable)
-giveAdvice() (Adds one new method)
+- `makesHouseCalls`: (Adds one new instance variable)
+- `giveAdvice()`: (Adds one new method)
 
 ### Let's design the inheritance tree for an Animal simulation program
 
@@ -99,45 +99,45 @@ Imagine you're asked to design a simulation program that lets the user throw a b
 5. Finish the class hierarchy. Since animals already have an organizational hierarchy (the whole kingdom, genus, phylum thing), we can use the level that makes the most sense for class design. We'll use the biological "families" to organize the animals by making t=a `Feline` class and a `Canine` class. We decide that `Canines` could use a common `roam()`method, because they tend to move in packs. We also see that `Felines` could use a common `roam()` method, because they tend to avoid others of their own kind. We'll let `Hippo` continue to use its inherited `roam()` method-- the generic one it gets from `Animal`. So we're done with the design for now.
 
 Superclass: Animal
-picture
-food
-hunger
-boundaries
-location
-makeNoise()
-eat()
-sleep()
-roam()
+- picture
+- food
+- hunger
+- boundaries
+- location
+- makeNoise()
+- eat()
+- sleep()
+- roam()
 
     Subclass: Feline
-    roam()
+    - roam()
 
         Subclass: Lion
-        makeNoise()
-        eat()
+        - makeNoise()
+        - eat()
 
         Subclass: Tiger
-        makeNoise()
-        eat()
+        - makeNoise()
+        - eat()
 
         Subclass: Cat
-        makeNoise()
-        eat()
+        - makeNoise()
+        - eat()
 
     Subclass: Hippo
-    makeNoise()
-    eat()
+    - makeNoise()
+    - eat()
 
     Subclass: Canine
-    roam()
+    - roam()
 
         Subclass: Wolf
-        makeNoise()
-        eat()
+        - makeNoise()
+        - eat()
 
         Subclass: Dog
-        makeNoise()
-        eat()
+        - makeNoise()
+        - eat()
 
 
 #### Which method is called?
@@ -164,7 +164,7 @@ When you call a method on an object reference, you're calling the most specific 
 
 #### Note:
 
-A wolf is a canine and a canine is an animal.----Up the tree--search lowest to highest
+A wolf is a canine and a canine is an animal----up the tree--search lowest to highest.
 
 ### Using IS-A and HAS-A
 
@@ -183,10 +183,10 @@ There's obviously more to it than what we've covered so far. For now, though, a 
 You get a lot of OO mileage by designing with inheritance. You avoid duplicate code by abstracting out the behavior common to a group of classes, and sticking that in a superclass. You will only need to modify in one place instead of all places the behavior is presented. Make the change and compile the class again. You don't have to touch the subclasses! Just deliver the newly-changed superclass, and all classes that extend it will automatically use the new version. As long as the superclass doesn't `break` anything for the subclass, everything's fine. Inheritance lets you guarantee that all classes grouped under a certain supertype have all the methods that the supertype has. In other words, you define a common protocol for a set of classes related through inheritance. When defining methods in a superclass, that can be inherited by other subclasses, you're announcing a kind of protocol to other code that says, "All my subtypes (subclasses) can do these things, with these methods that look like this...". In other words, you established a `contract`. Class Animal establishes a common protocol for all Animal subtypes:
 
 Superclass: Animal
-makeNoise()
-eat()
-sleep()
-roam()
+- makeNoise()
+- eat()
+- sleep()
+- roam()
 
 You're telling the world that any Animal can do these four things. That includes the method arguments and return types. And remember, when we say any Animal, we mean Animal and any class that extends from Animal. Which again means, any class that has Animal somewhere above it in the inheritance hierarchy. When you define a supertype for a group of classes, any subclass of that supertype can be substituted where the supertype is expected. And you care because you get to take advantage of `polymorphism`. Which matters because you get to refer to a subclass object using a reference declared as the supertype. That means that you get to write really flexibly code. Code that's cleaner. Code that's not just easier to develop, but also much, much easier to extend.
 
@@ -204,7 +204,7 @@ Dog myDog = new Dog();
 
 ```
 
-Declare the reference variable--Tells the JVM to allocate space for a reference variable. The reference variable is, forever, of type `Dog`. In other words, a remote control has buttons to control a `Dog`,, but not a Cat or a Button etc. Create an object--Tells JVM to allocate space for a new `Dog` object on the garbage collectible heap. Link the object and reference--Assigns the new `Dog` to the reference variable `myDog`. In other words, program the remote control. The important point is that the reference type `AND` the object type are the same. But with polymorphism, the reference and the object can be different.
+Declare the reference variable--Tells the JVM to allocate space for a reference variable. The reference variable is, forever, of type `Dog`. In other words, a remote control has buttons to control a `Dog`, but not a Cat or a Button etc. Create an object--Tells JVM to allocate space for a new `Dog` object on the garbage collectible heap. Link the object and reference--Assigns the new `Dog` to the reference variable `myDog`. In other words, program the remote control. The important point is that the reference type `AND` the object type are the same. But with polymorphism, the reference and the object can be different.
 
 ```java
 
