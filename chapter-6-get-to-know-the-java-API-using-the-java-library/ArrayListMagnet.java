@@ -11,7 +11,7 @@ public class ArrayListMagnet {
 
         printAL(a);
 
-        if (a.contains("three")) {
+        if (a.contains("three") && (a.contains("one"))) {
             a.add("four");
         }
 

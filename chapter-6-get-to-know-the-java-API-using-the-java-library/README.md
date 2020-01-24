@@ -232,7 +232,7 @@ public class DotCom {
         }
 
         System.out.println(result);
-            return result;
+        return result;
     }
 }
 
@@ -263,27 +263,27 @@ public class DotCom {
         // new and improved argument name -- userInput
 
         String result = "miss";
-            int index = locationCells.indexOf(userInput);
+        int index = locationCells.indexOf(userInput);
 
-            // Find out if the user guess is in the ArrayList, by asking for its index. If it's not in the list, then indexOf() returns a -1
+        // Find out if the user guess is in the ArrayList, by asking for its index. If it's not in the list, then indexOf() returns a -1
 
-            if (index >= 0) {
-                // If index is greater than or equal to zero, the user guess is definitely in the list, so remove it.
+        if (index >= 0) {
+            // If index is greater than or equal to zero, the user guess is definitely in the list, so remove it.
 
-                locationCells.remove(index);
+            locationCells.remove(index);
 
-                // Removing the index from list
+            // Removing the index from list
 
-                if (locationCells.isEmpty()) {
+            if (locationCells.isEmpty()) {
 
-                    // If the list is empty, this was the killing blow!
+                // If the list is empty, this was the killing blow!
 
-                    result = "kill";
-                } else {
-                    result = "hit";
-                }
+                result = "kill";
+            } else {
+                result = "hit";
             }
-            return result;
+        }
+        return result;
     }
 }
 
@@ -600,25 +600,25 @@ public class GameHelper {
                 // System.out.print( "try " + location);
 
                 int x = 0;
-                    success = true;
+                success = true;
 
-                    while (success && x < comSize) {
-                        if (grid[location] == 0) {
-                            coords[x++] = location;
-                            location += incr;
+                while (success && x < comSize) {
+                    if (grid[location] == 0) {
+                        coords[x++] = location;
+                        location += incr;
 
-                            if (location >= gridSize) {
-                                success = false;
-                            }
-
-                            if (x > 0 && (location % gridLength == 0)) {
-                                success = false;
-                            }
-                        } else {
-                            // System.out.print(" used " + location);
+                        if (location >= gridSize) {
                             success = false;
                         }
+
+                        if (x > 0 && (location % gridLength == 0)) {
+                            success = false;
+                        }
+                    } else {
+                        // System.out.print(" used " + location);
+                        success = false;
                     }
+                }
             }
 
             int x = 0;
@@ -664,7 +664,8 @@ java.util.ArrayList
 Package name: java.util
 Class name: ArrayList
 
-You have to tell Java which ArrayList you want to use. You have two options: Import or Type. Import: Put an import stament at the top of your source code file:
+You have to tell Java which ArrayList you want to use. You have two options: Import or Type. 
+Import: Put an import statement at the top of your source code file:
 
 ```java
 
@@ -698,7 +699,7 @@ public java.util.ArrayList<Dog> foo() {...}
 
 ```
 
-\*Unless the class is in the `java.lang` package.
+Unless the class is in the `java.lang` package.
 
 ### Use the HTML API docs
 
