@@ -199,7 +199,7 @@ ArrayList<String>;
 
 ```
 
-Prior to Java 5.0, there was no way to declare the `type` of things that would go in the ArrayList, so to the compiler, all ArrayLists were simply heterogenous collections of objects. But now, using the <typeGoesHere> syntax, we can declare and create an ArrayList that knows (and restricts) the types of objects it can hold. All you need to know now is, the syntax is a way to force the compiler to allow ony a specific type of object (the type in angle brackets) in the ArrayList.
+Prior to Java 5.0 there was no way to declare the `type` of things that would go in the ArrayList, so to the compiler, all ArrayLists were simply heterogenous collections of objects. But now, using the <typeGoesHere> syntax, we can declare and create an ArrayList that knows (and restricts) the types of objects it can hold. All you need to know now is, the syntax is a way to force the compiler to allow ony a specific type of object (the type in angle brackets) in the ArrayList.
 
 ### Let's fix the DotCom code.
 

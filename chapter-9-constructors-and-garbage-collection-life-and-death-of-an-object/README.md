@@ -317,7 +317,7 @@ Remember from the last chapter, the part where we looked at the Snowboard object
 
 All the constructors in an object's inheritance tree must run when you make a new object. That means every superclass has a constructor (because every class has a constructor), and each constructor up the hierarchy runs at the time an object of a subclass is created. Saying `new` is a Big Deal. It starts the whole constructor chain reaction. And yes, even abstract classes have constructors. Although you can never say new on an abstract class, an abstract class is still a superclass, so its constructor runs when someone makes an instance of a concrete subclass. The super constructors run to build out the superclass parts of the object. Remember; a subclass might inherit methods that depend on superclass state (in other words, the value of instance variables in the superclass). For an object to be fully-formed, all the superclass parts itself must be fully-formed, and that's why the super constructor `must` run. All instance variables from every class in the inheritance tree have to be declared and initialized. Even if Animal has instance variables that Hippo doesn't inherit (if the variables are private, for example), the Hippo still depends on the Animal methods that `use` those variables. When a constructor runs, it immediately calls its superclass constructor, all the way up the chain until you get to the class Object constructor.
 
-### Note:
+#### Note:
 
 A single Hippo object is on the heap. A new Hippo object also IS-A Animal and IS-A Object. If you want to make a Hippo, you must also make the Animal and Object parts of the Hippo. This all happens in a process called `Constructor Chaining`.
 
