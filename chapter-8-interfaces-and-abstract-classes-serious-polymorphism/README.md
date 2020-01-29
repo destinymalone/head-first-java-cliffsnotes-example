@@ -299,7 +299,7 @@ When you put an object in an ArrayList<Object>, you can treat it only as an Obje
 Object o = al.get(index);
 
 Dog d = (Dog) o;
-// Cast the Object back to a Dof we know is there.
+// Cast the Object back to a Dog we know is there.
 
 d.roam();
 
@@ -385,7 +385,7 @@ public class Dog extends Canine implements Pet {
 
 ````
 
-Classes from different inheritance trees can implement the same interface. When you use a `class` a polymorphic type (like an array of type Animal or a method that takes a Canine argument), the objects you can stick in that type must be from the same inheritance tree. But not just anywhere in the inheritance tree; the objects must be from a class that is a subclass of the polymorphic type. An argument of type Canine can accept a Wolf and a Dog, but not a Cat or a Hippo. But when you use an `interface` as a polymorphic type (like an array of Pets), the objects can be from `anywhere` in the inheritance tree. The only requirement is that the objects are from a class that `implements` the interface. Allowing classes in different inhertance trees to implement a common interface is crucia; in the Java API. Do you want an object to be able to save its state to a file? Implement the `Serializable` interface. Do you need objects to run their methods in a separate thread of execution? Implement Runnable. Remember that classes from `any` place in the inheritance tree might need to implement those interfaces. Nearly `any` class might want to be saveable or runnable. Better still, a class can implement `multiple` interfaces!
+Classes from different inheritance trees can implement the same interface. When you use a `class` a polymorphic type (like an array of type Animal or a method that takes a Canine argument), the objects you can stick in that type must be from the same inheritance tree. But not just anywhere in the inheritance tree; the objects must be from a class that is a subclass of the polymorphic type. An argument of type Canine can accept a Wolf and a Dog, but not a Cat or a Hippo. But when you use an `interface` as a polymorphic type (like an array of Pets), the objects can be from `anywhere` in the inheritance tree. The only requirement is that the objects are from a class that `implements` the interface. Allowing classes in different inheritance trees to implement a common interface is crucial in the Java API. Do you want an object to be able to save its state to a file? Implement the `Serializable` interface. Do you need objects to run their methods in a separate thread of execution? Implement Runnable. Remember that classes from `any` place in the inheritance tree might need to implement those interfaces. Nearly `any` class might want to be saveable or runnable. Better still, a class can implement `multiple` interfaces!
 
 ````java
 
